@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5271F727-907A-473B-8C7D-1CDCEC8F7006}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WHC.Dictionary</RootNamespace>
+    <AssemblyName>WHC.Dictionary.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Faster\App\3rdDlls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\WHC.Dictionary.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\WHC.Dictionary.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\Lib\WHC.Dictionary.Core.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DmProvider, Version=1.1.0.0, Culture=neutral, PublicKeyToken=7a2d44aa446c6d01, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\DmProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="EntLibContrib.Data.MySql, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\EntLibContrib.Data.MySql.dll</HintPath>
+    </Reference>
+    <Reference Include="EntLibContrib.Data.PostgreSql">
+      <HintPath>..\..\Reference\EnterpriseLibrary\EntLibContrib.Data.PostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="EntLibContrib.Data.SQLite, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\EntLibContrib.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\Reference\EnterpriseLibrary\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.0.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\Reference\EnterpriseLibrary\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.61.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\AppChannel.cs" />
+    <Compile Include="BLL\City.cs" />
+    <Compile Include="BLL\CorpDictData.cs" />
+    <Compile Include="BLL\District.cs" />
+    <Compile Include="BLL\Province.cs" />
+    <Compile Include="BLL\UserParameter.cs" />
+    <Compile Include="DAL\DALAccess\AppChannel.cs" />
+    <Compile Include="DAL\DALAccess\City.cs" />
+    <Compile Include="DAL\DALAccess\CorpDictData.cs" />
+    <Compile Include="DAL\DALAccess\District.cs" />
+    <Compile Include="DAL\DALAccess\Province.cs" />
+    <Compile Include="DAL\DALAccess\UserParameter.cs" />
+    <Compile Include="DAL\DALDm\AppChannel.cs" />
+    <Compile Include="DAL\DALDm\CorpDictData.cs" />
+    <Compile Include="DAL\DALMySql\AppChannel.cs" />
+    <Compile Include="DAL\DALMySql\City.cs" />
+    <Compile Include="DAL\DALMySql\CorpDictData.cs" />
+    <Compile Include="DAL\DALMySql\District.cs" />
+    <Compile Include="DAL\DALMySql\Province.cs" />
+    <Compile Include="DAL\DALMySql\UserParameter.cs" />
+    <Compile Include="DAL\DALOracle\AppChannel.cs" />
+    <Compile Include="DAL\DALOracle\City.cs" />
+    <Compile Include="DAL\DALOracle\CorpDictData.cs" />
+    <Compile Include="DAL\DALOracle\DictData.cs" />
+    <Compile Include="DAL\DALOracle\DictType.cs" />
+    <Compile Include="DAL\DALOracle\District.cs" />
+    <Compile Include="DAL\DALOracle\Province.cs" />
+    <Compile Include="DAL\DALOracle\UserParameter.cs" />
+    <Compile Include="DAL\DALPostgreSQL\AppChannel.cs" />
+    <Compile Include="DAL\DALPostgreSQL\City.cs" />
+    <Compile Include="DAL\DALPostgreSQL\CorpDictData.cs" />
+    <Compile Include="DAL\DALPostgreSQL\DictData.cs" />
+    <Compile Include="DAL\DALPostgreSQL\DictType.cs" />
+    <Compile Include="DAL\DALPostgreSQL\District.cs" />
+    <Compile Include="DAL\DALPostgreSQL\Province.cs" />
+    <Compile Include="DAL\DALPostgreSQL\UserParameter.cs" />
+    <Compile Include="DAL\DALSQLite\AppChannel.cs" />
+    <Compile Include="DAL\DALSQLite\City.cs" />
+    <Compile Include="DAL\DALSQLite\CorpDictData.cs" />
+    <Compile Include="DAL\DALSQLite\DictData.cs" />
+    <Compile Include="DAL\DALSQLite\DictType.cs" />
+    <Compile Include="DAL\DALSQLite\District.cs" />
+    <Compile Include="DAL\DALSQLite\Province.cs" />
+    <Compile Include="DAL\DALSQLite\UserParameter.cs" />
+    <Compile Include="DAL\DALSQL\AppChannel.cs" />
+    <Compile Include="DAL\DALSQL\City.cs" />
+    <Compile Include="DAL\DALSQL\CorpDictData.cs" />
+    <Compile Include="DAL\DALSQL\District.cs" />
+    <Compile Include="DAL\DALSQL\Province.cs" />
+    <Compile Include="DAL\DALSQL\UserParameter.cs" />
+    <Compile Include="DAL\DALDm\City.cs" />
+    <Compile Include="DAL\DALDm\DictData.cs" />
+    <Compile Include="DAL\DALDm\DictType.cs" />
+    <Compile Include="DAL\DALDm\District.cs" />
+    <Compile Include="DAL\DALDm\Province.cs" />
+    <Compile Include="DAL\DALDm\UserParameter.cs" />
+    <Compile Include="Entity\AppChannelInfo.cs" />
+    <Compile Include="Entity\CityInfo.cs" />
+    <Compile Include="Entity\CorpDictDataInfo.cs" />
+    <Compile Include="Entity\DictDataInfo.cs" />
+    <Compile Include="Entity\DictTypeInfo.cs" />
+    <Compile Include="Entity\DictTypeNodeInfo.cs" />
+    <Compile Include="Entity\DistrictInfo.cs" />
+    <Compile Include="Entity\ProvinceInfo.cs" />
+    <Compile Include="Entity\UserParameterInfo.cs" />
+    <Compile Include="IDAL\IAppChannel.cs" />
+    <Compile Include="IDAL\ICity.cs" />
+    <Compile Include="IDAL\ICorpDictData.cs" />
+    <Compile Include="IDAL\IDistrict.cs" />
+    <Compile Include="IDAL\IProvince.cs" />
+    <Compile Include="IDAL\IUserParameter.cs" />
+    <Compile Include="Other\MyConstants.cs" />
+    <Compile Include="BLL\DictData.cs" />
+    <Compile Include="BLL\DictType.cs" />
+    <Compile Include="DAL\DALAccess\DictData.cs" />
+    <Compile Include="DAL\DALAccess\DictType.cs" />
+    <Compile Include="DAL\DALSQL\DictData.cs" />
+    <Compile Include="DAL\DALSQL\DictType.cs" />
+    <Compile Include="Other\DictItemUtil.cs" />
+    <Compile Include="IDAL\IDictData.cs" />
+    <Compile Include="IDAL\IDictType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DAL\DALMySql\DictData.cs" />
+    <Compile Include="DAL\DALMySql\DictType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WHC.Framework.Commons\WHC.Framework.Commons.csproj">
+      <Project>{53ac195e-dcff-47c4-bc02-7e0241ff520c}</Project>
+      <Name>WHC.Framework.Commons</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Framework.ControlUtil\WHC.Framework.ControlUtil.csproj">
+      <Project>{d1d3850b-206f-49a9-ba9f-eac0c39de3dd}</Project>
+      <Name>WHC.Framework.ControlUtil</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Pager.Entity\WHC.Pager.Entity.csproj">
+      <Project>{8d58654e-3fdb-4f5f-921a-7832db994dce}</Project>
+      <Name>WHC.Pager.Entity</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Pager.WinControlDx\WHC.Pager.WinControlDx.csproj">
+      <Project>{bad3d23b-ef02-4367-a929-a28a5644eb7e}</Project>
+      <Name>WHC.Pager.WinControlDx</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

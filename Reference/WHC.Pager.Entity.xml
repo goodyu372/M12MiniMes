@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WHC.Pager.Entity</name>
+    </assembly>
+    <members>
+        <member name="P:WHC.Pager.Entity.PagerInfo.CurrenetPageIndex">
+            <summary>
+            获取或设置当前页码
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.Entity.PagerInfo.PageSize">
+            <summary>
+            获取或设置每页显示的记录
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.Entity.PagerInfo.RecordCount">
+            <summary>
+            获取或设置记录总数
+            </summary>
+        </member>
+    </members>
+</doc>

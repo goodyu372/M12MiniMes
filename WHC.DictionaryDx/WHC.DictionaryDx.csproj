@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD253610-E053-442A-BCD8-5594DE470CA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WHC.Dictionary</RootNamespace>
+    <AssemblyName>WHC.DictionaryDx</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Faster\App\3rdDlls\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\WHC.DictionaryDx.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\WHC.DictionaryDx.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\Lib\WHC.DictionaryDx.xml</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DmProvider, Version=1.1.0.0, Culture=neutral, PublicKeyToken=7a2d44aa446c6d01, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\DmProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="EntLibContrib.Data.MySql, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\EntLibContrib.Data.MySql.dll</HintPath>
+    </Reference>
+    <Reference Include="EntLibContrib.Data.PostgreSql, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\EntLibContrib.Data.PostgreSql.dll</HintPath>
+    </Reference>
+    <Reference Include="EntLibContrib.Data.SQLite, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\EntLibContrib.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Reference\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.0.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=2.0.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Reference\EnterpriseLibrary\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\whc.dictionary.core\bll\AppChannel.cs">
+      <Link>BLL\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\bll\City.cs">
+      <Link>BLL\City.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\bll\CorpDictData.cs">
+      <Link>BLL\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\bll\DictData.cs">
+      <Link>BLL\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\bll\DictType.cs">
+      <Link>BLL\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\bll\District.cs">
+      <Link>BLL\District.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\bll\Province.cs">
+      <Link>BLL\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\bll\UserParameter.cs">
+      <Link>BLL\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\AppChannel.cs">
+      <Link>DAL\DALAccess\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\City.cs">
+      <Link>DAL\DALAccess\City.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\CorpDictData.cs">
+      <Link>DAL\DALAccess\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\DictData.cs">
+      <Link>DAL\DALAccess\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\DictType.cs">
+      <Link>DAL\DALAccess\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\District.cs">
+      <Link>DAL\DALAccess\District.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\Province.cs">
+      <Link>DAL\DALAccess\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalaccess\UserParameter.cs">
+      <Link>DAL\DALAccess\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\AppChannel.cs">
+      <Link>DAL\DALDm\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\City.cs">
+      <Link>DAL\DALDm\City.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\CorpDictData.cs">
+      <Link>DAL\DALDm\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\DictData.cs">
+      <Link>DAL\DALDm\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\DictType.cs">
+      <Link>DAL\DALDm\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\District.cs">
+      <Link>DAL\DALDm\District.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\Province.cs">
+      <Link>DAL\DALDm\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daldm\UserParameter.cs">
+      <Link>DAL\DALDm\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\AppChannel.cs">
+      <Link>DAL\DALMySql\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\City.cs">
+      <Link>DAL\DALMySql\City.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\CorpDictData.cs">
+      <Link>DAL\DALMySql\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\DictData.cs">
+      <Link>DAL\DALMySql\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\DictType.cs">
+      <Link>DAL\DALMySql\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\District.cs">
+      <Link>DAL\DALMySql\District.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\Province.cs">
+      <Link>DAL\DALMySql\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalmysql\UserParameter.cs">
+      <Link>DAL\DALMySql\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\AppChannel.cs">
+      <Link>DAL\DALOracle\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\City.cs">
+      <Link>DAL\DALOracle\City.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\CorpDictData.cs">
+      <Link>DAL\DALOracle\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\DictData.cs">
+      <Link>DAL\DALOracle\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\DictType.cs">
+      <Link>DAL\DALOracle\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\District.cs">
+      <Link>DAL\DALOracle\District.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\Province.cs">
+      <Link>DAL\DALOracle\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\daloracle\UserParameter.cs">
+      <Link>DAL\DALOracle\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\AppChannel.cs">
+      <Link>DAL\DALPostgreSQL\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\City.cs">
+      <Link>DAL\DALPostgreSQL\City.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\CorpDictData.cs">
+      <Link>DAL\DALPostgreSQL\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\DictData.cs">
+      <Link>DAL\DALPostgreSQL\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\DictType.cs">
+      <Link>DAL\DALPostgreSQL\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\District.cs">
+      <Link>DAL\DALPostgreSQL\District.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\Province.cs">
+      <Link>DAL\DALPostgreSQL\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\DAL\DALPostgreSQL\UserParameter.cs">
+      <Link>DAL\DALPostgreSQL\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\AppChannel.cs">
+      <Link>DAL\DALSQLite\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\City.cs">
+      <Link>DAL\DALSQLite\City.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\CorpDictData.cs">
+      <Link>DAL\DALSQLite\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\DictData.cs">
+      <Link>DAL\DALSQLite\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\DictType.cs">
+      <Link>DAL\DALSQLite\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\District.cs">
+      <Link>DAL\DALSQLite\District.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\Province.cs">
+      <Link>DAL\DALSQLite\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsqlite\UserParameter.cs">
+      <Link>DAL\DALSQLite\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\AppChannel.cs">
+      <Link>DAL\DALSQL\AppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\City.cs">
+      <Link>DAL\DALSQL\City.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\CorpDictData.cs">
+      <Link>DAL\DALSQL\CorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\DictData.cs">
+      <Link>DAL\DALSQL\DictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\DictType.cs">
+      <Link>DAL\DALSQL\DictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\District.cs">
+      <Link>DAL\DALSQL\District.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\Province.cs">
+      <Link>DAL\DALSQL\Province.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\dal\dalsql\UserParameter.cs">
+      <Link>DAL\DALSQL\UserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\AppChannelInfo.cs">
+      <Link>Entity\AppChannelInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\CityInfo.cs">
+      <Link>Entity\CityInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\CorpDictDataInfo.cs">
+      <Link>Entity\CorpDictDataInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\DictDataInfo.cs">
+      <Link>Entity\DictDataInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\DictTypeInfo.cs">
+      <Link>Entity\DictTypeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\DictTypeNodeInfo.cs">
+      <Link>Entity\DictTypeNodeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\DistrictInfo.cs">
+      <Link>Entity\DistrictInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\ProvinceInfo.cs">
+      <Link>Entity\ProvinceInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\entity\UserParameterInfo.cs">
+      <Link>Entity\UserParameterInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\IAppChannel.cs">
+      <Link>IDAL\IAppChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\ICity.cs">
+      <Link>IDAL\ICity.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\ICorpDictData.cs">
+      <Link>IDAL\ICorpDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\IDictData.cs">
+      <Link>IDAL\IDictData.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\IDictType.cs">
+      <Link>IDAL\IDictType.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\IDistrict.cs">
+      <Link>IDAL\IDistrict.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\IProvince.cs">
+      <Link>IDAL\IProvince.cs</Link>
+    </Compile>
+    <Compile Include="..\whc.dictionary.core\idal\IUserParameter.cs">
+      <Link>IDAL\IUserParameter.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\Other\DictItemUtil.cs">
+      <Link>Other\DictItemUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\WHC.Dictionary.Core\Other\MyConstants.cs">
+      <Link>Other\MyConstants.cs</Link>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmBatchAddDictData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmBatchAddDictData.Designer.cs">
+      <DependentUpon>FrmBatchAddDictData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmBatchAddDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmBatchAddDistrict.Designer.cs">
+      <DependentUpon>FrmBatchAddDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmCityDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmCityDistrict.Designer.cs">
+      <DependentUpon>FrmCityDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmDictionary.designer.cs">
+      <DependentUpon>FrmDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmEditProvince.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmEditProvince.Designer.cs">
+      <DependentUpon>FrmEditProvince.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmEditDistrict.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmEditDistrict.Designer.cs">
+      <DependentUpon>FrmEditDistrict.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmEditDictData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmEditDictData.designer.cs">
+      <DependentUpon>FrmEditDictData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmEditDictType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmEditDictType.designer.cs">
+      <DependentUpon>FrmEditDictType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\FrmEditCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmEditCity.Designer.cs">
+      <DependentUpon>FrmEditCity.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmBatchAddDictData.resx">
+      <DependentUpon>FrmBatchAddDictData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmBatchAddDistrict.resx">
+      <DependentUpon>FrmBatchAddDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmCityDistrict.resx">
+      <DependentUpon>FrmCityDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmDictionary.resx">
+      <DependentUpon>FrmDictionary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmEditProvince.resx">
+      <DependentUpon>FrmEditProvince.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmEditDistrict.resx">
+      <DependentUpon>FrmEditDistrict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmEditDictData.resx">
+      <DependentUpon>FrmEditDictData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmEditDictType.resx">
+      <DependentUpon>FrmEditDictType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmEditCity.resx">
+      <DependentUpon>FrmEditCity.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WHC.Framework.BaseUIDx\WHC.Framework.BaseUIDx.csproj">
+      <Project>{a22e5819-92fe-43d2-8da7-6a2b9c2d25db}</Project>
+      <Name>WHC.Framework.BaseUIDx</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Framework.Commons\WHC.Framework.Commons.csproj">
+      <Project>{53ac195e-dcff-47c4-bc02-7e0241ff520c}</Project>
+      <Name>WHC.Framework.Commons</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Framework.ControlUtil\WHC.Framework.ControlUtil.csproj">
+      <Project>{d1d3850b-206f-49a9-ba9f-eac0c39de3dd}</Project>
+      <Name>WHC.Framework.ControlUtil</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Framework.Language\WHC.Framework.Language.csproj">
+      <Project>{4ff53539-d8ee-4ce8-81ba-e7af56a1f566}</Project>
+      <Name>WHC.Framework.Language</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Pager.Entity\WHC.Pager.Entity.csproj">
+      <Project>{8d58654e-3fdb-4f5f-921a-7832db994dce}</Project>
+      <Name>WHC.Pager.Entity</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WHC.Pager.WinControlDx\WHC.Pager.WinControlDx.csproj">
+      <Project>{bad3d23b-ef02-4367-a929-a28a5644eb7e}</Project>
+      <Name>WHC.Pager.WinControlDx</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

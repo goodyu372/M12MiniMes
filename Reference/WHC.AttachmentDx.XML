@@ -1,0 +1,1279 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WHC.AttachmentDx</name>
+    </assembly>
+    <members>
+        <member name="T:WHC.Attachment.BLL.FileUpload">
+            <summary>
+            上传文件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetByOwner(System.String)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetByOwner(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetByOwnerAndAttachGUID(System.String,System.String)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetByOwnerAndAttachGUID(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.Delete(System.Object,System.Data.Common.DbTransaction)">
+            <summary>
+            删除指定的ID记录，如果是相对目录的文件则移除文件到DeletedFiles文件夹里面
+            </summary>
+            <param name="key">记录ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.DeleteByOwerID(System.String)">
+            <summary>
+            删除指定OwnerID的数据记录
+            </summary>
+            <param name="owerID">所属者的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.DeleteByAttachGUID(System.String)">
+            <summary>
+            删除指定Attachment_GUID的数据记录
+            </summary>
+            <param name="attachment_GUID">附件的attachmentGUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.Upload(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件（根据配置文件选择合适的上传方式）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetFTPConfig">
+            <summary>
+            获取配置的FTP配置参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.UploadByFTP(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件(以FTP方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.UploadByNormal(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件（以文件方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.PathCombine(System.String,System.String)">
+            <summary>
+            将两个路径组合一个合适的路径
+            </summary>
+            <param name="path1">路径1</param>
+            <param name="path2">追加的路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.Download(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            获取单一的文件数据（包含文件字节数据）,如果指定了图片的高度，宽度，那么下载缩略图
+            </summary>
+            <param name="id">附件记录的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetFilePath(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            检查输入及组合路径
+            </summary>
+            <param name="info">上传文件信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.IsPathRooted(System.String)">
+            <summary>
+            是否为绝对地址（该方法代替Path.IsPathRooted进行判断，因Path.IsPathRooted把路径包含\\也作为物理路径
+            </summary>
+            <param name="path">目录路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetFirstFilePath(System.String)">
+            <summary>
+            根据attachmentGUID的参数获取对应的第一个文件路径
+            </summary>
+            <param name="attachmentGUID">附件的attachmentGUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.UploadFile(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            把文件保存到指定目录,并返回相对基础目录的路径
+            </summary>
+            <param name="info">文件上传信息</param>
+            <returns>成功返回相对基础目录的路径，否则返回空字符</returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.GetRightFileName(System.String,System.Int32)">
+            <summary>
+            查找文件名，如果存在则在文件名后面加(i)，i从1开始计算
+            </summary>
+            <param name="originalFilePath">原文件名</param>
+            <param name="i">计数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.DeleteFile(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            删除物理文件
+            </summary>
+            <param name="info">文件信息</param>
+        </member>
+        <member name="M:WHC.Attachment.BLL.FileUpload.FindSingleByAttachGUID(System.String)">
+            <summary>
+            根据唯一的GUID获取一个唯一的记录
+            </summary>
+            <param name="attachmentGUID">附件GUID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.DALAccess.FileUpload">
+            <summary>
+            相关附件信息
+            </summary>
+        </member>
+        <member name="T:WHC.Attachment.IDAL.IFileUpload">
+            <summary>
+            上传文件操作
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.IDAL.IFileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.IDAL.IFileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.IDAL.IFileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.IDAL.IFileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.IDAL.IFileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.IDAL.IFileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.IDAL.IFileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.DataReaderToEntity(System.Data.IDataReader)">
+            <summary>
+            将DataReader的属性值转化为实体类的属性值，返回实体类
+            </summary>
+            <param name="dr">有效的DataReader对象</param>
+            <returns>实体类对象</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.GetHashByEntity(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            将实体对象的属性值转化为Hashtable对应的键值
+            </summary>
+            <param name="obj">有效的实体对象</param>
+            <returns>包含键值映射的Hashtable</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALAccess.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.DALDm.FileUpload">
+            <summary>
+            相关附件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.DataReaderToEntity(System.Data.IDataReader)">
+            <summary>
+            将DataReader的属性值转化为实体类的属性值，返回实体类
+            </summary>
+            <param name="dr">有效的DataReader对象</param>
+            <returns>实体类对象</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.GetHashByEntity(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            将实体对象的属性值转化为Hashtable对应的键值
+            </summary>
+            <param name="obj">有效的实体对象</param>
+            <returns>包含键值映射的Hashtable</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALDm.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.DALMySql.FileUpload">
+            <summary>
+            相关附件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.DataReaderToEntity(System.Data.IDataReader)">
+            <summary>
+            将DataReader的属性值转化为实体类的属性值，返回实体类
+            </summary>
+            <param name="dr">有效的DataReader对象</param>
+            <returns>实体类对象</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.GetHashByEntity(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            将实体对象的属性值转化为Hashtable对应的键值
+            </summary>
+            <param name="obj">有效的实体对象</param>
+            <returns>包含键值映射的Hashtable</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALMySql.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.DALOracle.FileUpload">
+            <summary>
+            相关附件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.DataReaderToEntity(System.Data.IDataReader)">
+            <summary>
+            将DataReader的属性值转化为实体类的属性值，返回实体类
+            </summary>
+            <param name="dr">有效的DataReader对象</param>
+            <returns>实体类对象</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.GetHashByEntity(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            将实体对象的属性值转化为Hashtable对应的键值
+            </summary>
+            <param name="obj">有效的实体对象</param>
+            <returns>包含键值映射的Hashtable</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALOracle.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.DALPostgreSQL.FileUpload">
+            <summary>
+            相关附件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.DataReaderToEntity(System.Data.IDataReader)">
+            <summary>
+            将DataReader的属性值转化为实体类的属性值，返回实体类
+            </summary>
+            <param name="dr">有效的DataReader对象</param>
+            <returns>实体类对象</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.GetHashByEntity(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            将实体对象的属性值转化为Hashtable对应的键值
+            </summary>
+            <param name="obj">有效的实体对象</param>
+            <returns>包含键值映射的Hashtable</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALPostgreSQL.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.DALSQLite.FileUpload">
+            <summary>
+            相关附件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.DataReaderToEntity(System.Data.IDataReader)">
+            <summary>
+            将DataReader的属性值转化为实体类的属性值，返回实体类
+            </summary>
+            <param name="dr">有效的DataReader对象</param>
+            <returns>实体类对象</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.GetHashByEntity(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            将实体对象的属性值转化为Hashtable对应的键值
+            </summary>
+            <param name="obj">有效的实体对象</param>
+            <returns>包含键值映射的Hashtable</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQLite.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.DALSQL.FileUpload">
+            <summary>
+            相关附件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.DataReaderToEntity(System.Data.IDataReader)">
+            <summary>
+            将DataReader的属性值转化为实体类的属性值，返回实体类
+            </summary>
+            <param name="dr">有效的DataReader对象</param>
+            <returns>实体类对象</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.GetHashByEntity(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            将实体对象的属性值转化为Hashtable对应的键值
+            </summary>
+            <param name="obj">有效的实体对象</param>
+            <returns>包含键值映射的Hashtable</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.GetAllByUser(System.String,System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.GetByAttachGUID(System.String,WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据文件的相对路径，删除文件
+            </summary>
+            <param name="relativeFilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.GetFileNames(System.String)">
+            <summary>
+            根据附件组GUID获取对应的文件名列表，方便列出文件名
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns>返回ID和文件名的列表</returns>
+        </member>
+        <member name="M:WHC.Attachment.DALSQL.FileUpload.SetDeleteFlag(System.String)">
+            <summary>
+            标记为删除（不直接删除)
+            </summary>
+            <param name="id">文件的ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.Entity.FileUploadInfo">
+            <summary>
+            上传附件信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.Entity.FileUploadInfo.#ctor">
+            <summary>
+            默认构造函数（需要初始化属性的在此处理）
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.Owner_ID">
+            <summary>
+            附件组所属记录ID
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.AttachmentGUID">
+            <summary>
+            附件组GUID
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.BasePath">
+            <summary>
+            基础路径，在单机版的情况下，路径为本地物理路径
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.SavePath">
+            <summary>
+            文件保存相对路径
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.Category">
+            <summary>
+            文件分类
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.FileExtend">
+            <summary>
+            文件扩展名
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.Editor">
+            <summary>
+            所属用户
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.AddTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.DeleteFlag">
+            <summary>
+            删除标志，1为删除，0为正常
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FileUploadInfo.FileData">
+            <summary>
+            文件流数据
+            </summary>
+        </member>
+        <member name="T:WHC.Attachment.Entity.FTPInfo">
+            <summary>
+            FTP配置信息
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.Entity.FTPInfo.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.Entity.FTPInfo.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            参数化构造函数
+            </summary>
+            <param name="server"></param>
+            <param name="user"></param>
+            <param name="password"></param>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FTPInfo.Server">
+            <summary>
+            FTP服务地址
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FTPInfo.User">
+            <summary>
+            FTP用户名
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FTPInfo.Password">
+            <summary>
+            FTP密码
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.Entity.FTPInfo.BaseUrl">
+            <summary>
+            FTP的基础路径，如可以指定为IIS的路径：http://www.iqidi.com:8000 ,方便下载打开
+            </summary>
+        </member>
+        <member name="T:WHC.Attachment.UI.MessageDxUtil">
+            <summary>
+            MessageBox 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.MessageDxUtil.ShowTips(System.String)">
+            <summary>
+            显示一般的提示信息
+            </summary>
+            <param name="message">提示信息</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.MessageDxUtil.ShowWarning(System.String)">
+            <summary>
+            显示警告信息
+            </summary>
+            <param name="message">警告信息</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.MessageDxUtil.ShowError(System.String)">
+            <summary>
+            显示错误信息
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.MessageDxUtil.ShowYesNoAndError(System.String)">
+            <summary>
+            显示询问用户信息，并显示错误标志
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.MessageDxUtil.ShowYesNoAndTips(System.String)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.MessageDxUtil.ShowYesNoAndWarning(System.String)">
+            <summary>
+            显示询问用户信息，并显示警告标志
+            </summary>
+            <param name="message">警告信息</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.MessageDxUtil.ShowYesNoCancelAndTips(System.String)">
+            <summary>
+            显示询问用户信息，并显示提示标志
+            </summary>
+            <param name="message">错误信息</param>
+        </member>
+        <member name="F:WHC.Attachment.UI.AboutBox.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.AboutBox.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.AboutBox.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.AttachmentControl.OwerId">
+            <summary>
+            附件组所属的记录ID，如属于某个主表记录的ID
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.AttachmentControl.userId">
+            <summary>
+            操作用户ID，当前登录用户
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.AttachmentControl.AttachmentDirectory">
+            <summary>
+            设置附件的存储目录分类
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.AttachmentControl.m_AttachmentGUID">
+            <summary>
+            设置附件组的GUID
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.AttachmentControl.Init(System.String,System.String,System.String)">
+            <summary>
+            初始化相关参数
+            </summary>
+            <param name="attachmentDir">设置附件的存储目录分类</param>
+            <param name="owerId">附件组所属的记录ID，如属于某个主表记录的ID</param>
+            <param name="userId">操作用户ID，当前登录用户</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.AttachmentControl.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.AttachmentControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.AttachmentControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.AttachmentControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.AttachmentControl.ShowUpload">
+            <summary>
+            是否显示上传按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.AttachmentControl.ShowDelete">
+            <summary>
+            是否显示删除按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.AttachmentControl.ShowDownload">
+            <summary>
+            是否显示下载按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.AttachmentControl.AttachmentGUID">
+            <summary>
+            附件组的GUID
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.AttachmentControl.TipsContent">
+            <summary>
+            提示内容文本格式
+            </summary>
+        </member>
+        <!-- 对于成员“P:WHC.Attachment.UI.AttachmentControl.DesignMode”忽略有格式错误的 XML 注释 -->
+        <member name="M:WHC.Attachment.UI.BizAttachment.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.BizAttachment.Init(System.String,System.String,System.String)">
+            <summary>
+            初始化相关参数
+            </summary>
+            <param name="attachmentDir">设置附件的存储目录分类</param>
+            <param name="owerId">附件组所属的记录ID，如属于某个主表记录的ID</param>
+            <param name="userId">操作用户ID，当前登录用户</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.BizAttachment.InitButtonStatus(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            初始化按钮的显示状态
+            </summary>
+            <param name="showUpload">是否显示上传按钮</param>
+            <param name="showDelete">是否显示删除按钮</param>
+            <param name="showDownload">是否显示下载按钮</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.BizAttachment.BindData">
+            <summary>
+            绑定数据
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.BizAttachment.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.BizAttachment.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.BizAttachment.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.ShowUpload">
+            <summary>
+            是否显示上传按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.ShowDelete">
+            <summary>
+            是否显示删除按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.ShowDownload">
+            <summary>
+            是否显示下载按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.ShowOwnerData">
+            <summary>
+            是否使用Owner的方式对数据进行过滤，如果为True，则获取属于OwerId的所有记录
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.OwerId">
+            <summary>
+            附件组所属的记录ID，如属于某个主表记录的ID
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.AttachmentDirectory">
+            <summary>
+            设置附件的存储目录分类
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.BizAttachment.AttachmentGUID">
+            <summary>
+            附件组的GUID
+            </summary>
+        </member>
+        <!-- 对于成员“P:WHC.Attachment.UI.BizAttachment.DesignMode”忽略有格式错误的 XML 注释 -->
+        <member name="F:WHC.Attachment.UI.FrmAttachment.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmAttachment.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmAttachment.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmAttachment.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmAttachmentGroupView.OwerId">
+            <summary>
+            附件组所属的记录ID，如属于某个主表记录的ID
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmAttachmentGroupView.UserId">
+            <summary>
+            操作用户ID，当前登录用户
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmAttachmentGroupView.AttachmentDirectory">
+            <summary>
+            设置附件的存储目录分类
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmAttachmentGroupView.AttachmentGUID">
+            <summary>
+            设置附件组的GUID
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmAttachmentGroupView.imageDict">
+            <summary>
+            附件列表中文件后缀名图片列表（自动从本地读取加载）
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmAttachmentGroupView.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmAttachmentGroupView.InitButtonStatus(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            初始化按钮的显示状态
+            </summary>
+            <param name="showUpload">是否显示上传按钮</param>
+            <param name="showDelete">是否显示删除按钮</param>
+            <param name="showDownload">是否显示下载按钮</param>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmAttachmentGroupView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmAttachmentGroupView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmAttachmentGroupView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.FrmAttachmentGroupView.ShowUpload">
+            <summary>
+            是否显示上传按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.FrmAttachmentGroupView.ShowDelete">
+            <summary>
+            是否显示删除按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.FrmAttachmentGroupView.ShowDownload">
+            <summary>
+            是否显示下载按钮
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmPicturePreview.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmPicturePreview.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmPicturePreview.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.FrmPicturePreview.PicturePath">
+            <summary>
+            图片路径
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.UI.FrmPicturePreview.ImageObj">
+            <summary>
+            图片对象（可选）
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmUploadFile.AttachmentDirectory">
+            <summary>
+            设置附件的存储目录分类
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmUploadFile.AttachmentGUID">
+            <summary>
+            指定附件对应的GUID
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmUploadFile.UserId">
+            <summary>
+            附件的编辑人
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmUploadFile.OwerId">
+            <summary>
+            附件组所属的记录ID，如属于某个主表记录的ID
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.UI.FrmUploadFile.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmUploadFile.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Attachment.UI.FrmUploadFile.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Attachment.UI.MyHelper">
+            <summary>
+            公用辅助函数
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.MyConstants.ConfigFile">
+            <summary>
+            默认的配置文件路径
+            </summary>
+        </member>
+        <member name="P:WHC.Attachment.MyConstants.License">
+            <summary>
+            授权用户的授权码
+            </summary>
+        </member>
+        <member name="T:WHC.AttachmentDx.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:WHC.AttachmentDx.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:WHC.AttachmentDx.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

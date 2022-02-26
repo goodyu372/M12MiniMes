@@ -1,0 +1,2429 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WHC.Framework.BaseUI</name>
+    </assembly>
+    <members>
+        <member name="T:WHC.Framework.BaseUI.FieldType">
+            <summary>
+            字段数据类型
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.AddColumnAlias(System.String,System.String)">
+            <summary>
+            添加列名的别名（显示名称）
+            </summary>
+            <param name="key">列的原始名称</param>
+            <param name="alias">列的别名（显示名称）</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.AddColumnListItem(System.String,System.Collections.Generic.ICollection{WHC.Framework.Commons.CListItem})">
+            <summary>
+            为指定列设置下拉列表默认值
+            </summary>
+            <param name="key">列的原始名称</param>
+            <param name="listItems">列的别名列表集合</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.AddColumnListItem(System.String,System.Collections.Generic.List{WHC.Framework.Commons.CListItem})">
+            <summary>
+            为指定列设置下拉列表默认值
+            </summary>
+            <param name="key">列的原始名称</param>
+            <param name="listItems">列的别名列表集合</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.AddColumnListItem(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            为指定列设置下拉列表默认值
+            </summary>
+            <param name="key">列的原始名称</param>
+            <param name="listItems">列的别名列表集合</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.AddColumnListItem(System.String,System.String)">
+            <summary>
+            为指定列设置下拉列表默认值
+            </summary>
+            <param name="key">列的原始名称</param>
+            <param name="listItems">列的别名列表集合，字符串格式，使用"|"或者","分开每个列，如“ID,Name”</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.GetDisplayColumnIndex(System.String)">
+            <summary>
+            返回对应字段的显示顺序，如果没有，返回-1
+            </summary>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.ProcessDataSearch(System.Object,System.EventArgs)">
+            <summary>
+            处理数据查询后的事件触发
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.ProcessDataClear(System.Object,System.EventArgs)">
+            <summary>
+            数据清除后的操作
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.UpdateFieldValue(System.String,System.String,System.String)">
+            <summary>
+            更新查询字段值，并重新绑定界面
+            </summary>
+            <param name="fieldName">字段名称</param>
+            <param name="fieldValue">字段值</param>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmAdvanceSearch.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmAdvanceSearch.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.FrmAdvanceSearch.ConditionChanged">
+            <summary>
+            查询条件触发的事件
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.FrmAdvanceSearch.DataClear">
+            <summary>
+            清除数据触发事件
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmAdvanceSearch.FieldTypeTable">
+            <summary>
+            用于高级查询用途的表字段名称、类型列表
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmAdvanceSearch.DisplayColumns">
+            <summary>
+            显示的列内容，需要指定以防止GridView乱序
+            使用"|"或者","分开每个列，如“ID,Name”
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmAdvanceSearch.ColumnNameAlias">
+            <summary>
+            列名的别名字典集合
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryBase.FieldName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryBase.FieldDisplayName">
+            <summary>
+            字段显示名称
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryBase.FieldDefaultValue">
+            <summary>
+            字段默认值，多个值使用 ~ 分开
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryBase.DropDownItems">
+            <summary>
+            下拉列表的绑定数据
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryBase.ReturnValue">
+            <summary>
+            返回的字段查询内容值
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryBase.ReturnDisplay">
+            <summary>
+            返回的字段查询内容显示内容
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryBase.ProcessDataClear(System.String)">
+            <summary>
+            处理数据清除后的事件触发
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryBase.ProcessDataSearch(System.Object,System.EventArgs)">
+            <summary>
+            处理数据查询后的事件触发
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryBase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryBase.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryDateEdit.SearchControl_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            提供给控件回车执行查询的操作
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryDateEdit.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryDateEdit.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryDateEdit.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryDropdown.SearchControl_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            提供给控件回车执行查询的操作
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryDropdown.SetComboBoxItem(System.Windows.Forms.ComboBox,System.String)">
+            <summary>
+            设置下拉列表选中指定的值
+            </summary>
+            <param name="combo">下拉列表</param>
+            <param name="value">指定的CListItem中的值</param>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryDropdown.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryDropdown.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryDropdown.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryNumericEdit.SearchControl_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            提供给控件回车执行查询的操作
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryNumericEdit.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryNumericEdit.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryNumericEdit.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryTextEdit.SearchControl_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            提供给控件回车执行查询的操作
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmQueryTextEdit.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryTextEdit.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmQueryTextEdit.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.BaseUserControl">
+            <summary>
+            自定义控件基类
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.IFunction">
+            <summary>
+            父窗体实现的权限控制接口
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.IFunction.InitFunction(WHC.Framework.Commons.LoginUserInfo,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            初始化权限控制信息
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.IFunction.HasFunction(System.String)">
+            <summary>
+            是否具有访问指定控制ID的权限
+            </summary>
+            <param name="controlId">功能控制ID</param>
+            <returns></returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.IFunction.LoginUserInfo">
+            <summary>
+            登陆用户基础信息
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.IFunction.FunctionDict">
+            <summary>
+            登录用户具有的功能字典集合
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.IFunction.AppInfo">
+            <summary>
+            应用程序基础信息
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.ProcessDataSaved(System.Object,System.EventArgs)">
+            <summary>
+            处理数据保存后的事件触发
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.WriteException(System.Exception)">
+            <summary>
+            记录异常
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.ProcessException(System.Exception)">
+            <summary>
+            处理异常信息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.InitFunction(WHC.Framework.Commons.LoginUserInfo,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            初始化权限控制信息
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.HasFunction(System.String)">
+            <summary>
+            是否具有访问指定控制ID的权限
+            </summary>
+            <param name="controlId">功能控制ID</param>
+            <returns></returns>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.BaseUserControl.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseUserControl.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.BaseUserControl.OnDataSaved">
+            <summary>
+            子窗体数据保存的触发
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseUserControl.DataFilterCondition">
+            <summary>
+            进行数据过滤的Sql条件，默认通过 Cache.Instance["DataFilterCondition"]获取
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseUserControl.SelectedCompanyID">
+            <summary>
+            选择查看的公司ID
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseUserControl.LoginUserInfo">
+            <summary>
+            登陆用户基础信息
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseUserControl.FunctionDict">
+            <summary>
+            登录用户具有的功能字典集合
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseUserControl.AppInfo">
+            <summary>
+            应用程序基础信息
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.FrmImportExcelData">
+            <summary>
+            通用Excel数据导入操作
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.BaseForm">
+            <summary>
+            常规界面基类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.ProcessDataSaved(System.Object,System.EventArgs)">
+            <summary>
+            处理数据保存后的事件触发
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.WriteException(System.Exception)">
+            <summary>
+            记录异常信息
+            </summary>
+            <param name="ex">异常信息</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.ProcessException(System.Exception)">
+            <summary>
+            处理异常信息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.FormOnLoad">
+            <summary>
+            可供重写的窗体加载函数，子窗体特殊处理只需重写该函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.InitFunction(WHC.Framework.Commons.LoginUserInfo,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            初始化权限控制信息
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.HasFunction(System.String)">
+            <summary>
+            是否具有访问指定控制ID的权限
+            </summary>
+            <param name="controlId">功能控制ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.OnLoadFormActived(System.String)">
+            <summary>
+            窗体激活的事件处理
+            </summary>
+            <param name="json">传递的参数内容，自定义JSON格式</param>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.BaseForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.BaseForm.OnDataSaved">
+            <summary>
+            子窗体数据保存的触发
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.BaseForm.LoadFormActived">
+            <summary>
+            使用ChildWinManagement辅助类处理多文档加载的窗体，在构建或激活后，触发一个通知窗体的事件，方便传递相关参数到目标窗体。
+            为了更加通用的处理，传递的参数使用JSON定义格式的字符串。
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseForm.DataFilterCondition">
+            <summary>
+            进行数据过滤的Sql条件，默认通过 Cache.Instance["DataFilterCondition"]获取
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseForm.SelectedCompanyID">
+            <summary>
+            选择查看的公司ID
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseForm.LoginUserInfo">
+            <summary>
+            登陆用户基础信息
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseForm.FunctionDict">
+            <summary>
+            登录用户具有的功能字典集合
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseForm.AppInfo">
+            <summary>
+            应用程序基础信息
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.BaseForm.FormActiveHandler">
+            <summary>
+            定义一个窗体激活后的处理委托类型
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImportExcelData.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImportExcelData.SetTemplate(System.String,System.String)">
+            <summary>
+            设置导入模板标题，及文件路径
+            </summary>
+            <param name="title">模板标题</param>
+            <param name="filePath">模板文件路径</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImportExcelData.ViewData">
+            <summary>
+            查看Excel文件并显示在界面上操作
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImportExcelData.IsChinese(System.String)">
+            <summary>
+            判断字符是否为中午
+            </summary>
+            <param name="str_chinese"></param>
+            <returns></returns>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmImportExcelData.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImportExcelData.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImportExcelData.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.FrmImportExcelData.OnDataSave">
+            <summary>
+            数据保存的事件
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.FrmImportExcelData.OnRefreshData">
+            <summary>
+            数据刷新的事件
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.FrmImportExcelData.SaveDataHandler">
+            <summary>
+            数据保存的代理定义
+            </summary>
+            <param name="dr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Controls.GlassButton">
+            <summary>
+            Represents a glass button control.
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.GlassButton.toolTip">
+            <summary>
+            The ToolTip of the Control.
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.GlassButton.drawShine">
+            <summary>
+            If false, the shine isn't drawn (-> symbolizes an disabled control).
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.GlassButton.transperencyFactor">
+            <summary>
+            Set the trynsperency of the special Symbols.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:Glass.GlassButton"/> class.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnClick(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Click"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnEnter(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Enter" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnLeave(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Leave" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" /> event.
+            </summary>
+            <param name="kevent">A <see cref="T:System.Windows.Forms.KeyEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.ButtonBase.OnKeyUp(System.Windows.Forms.KeyEventArgs)" /> event.
+            </summary>
+            <param name="kevent">A <see cref="T:System.Windows.Forms.KeyEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseDown" /> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseUp" /> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.Control.OnMouseMove(System.Windows.Forms.MouseEventArgs)" /> event.
+            </summary>
+            <param name="mevent">A <see cref="T:System.Windows.Forms.MouseEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseEnter"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.MouseLeave"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Raises the <see cref="M:System.Windows.Forms.ButtonBase.OnPaint(System.Windows.Forms.PaintEventArgs)" /> event.
+            </summary>
+            <param name="pevent">A <see cref="T:System.Windows.Forms.PaintEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.DrawButtonBackground(System.Drawing.Graphics)">
+            <summary>
+            Draws the button background.
+            </summary>
+            <param name="g">The graphics to draw on.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.DrawSpecialSymbol(System.Drawing.Graphics)">
+            <summary>
+            Draws the special symbol.
+            </summary>
+            <param name="g">The graphics to draw on.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.DrawButtonForeground(System.Drawing.Graphics)">
+            <summary>
+            Draws the button foreground.
+            </summary>
+            <param name="g">The graphics to draw on.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.DrawForegroundFromButton(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Draws the foreground from button.
+            </summary>
+            <param name="pevent">The <see cref="T:System.Windows.Forms.PaintEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.CreateRoundRectangle(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Creates the round rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="radius">The radius.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.CreateTopRoundRectangle(System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Creates the top round rectangle.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <param name="radius">The radius.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.CreateBottomRadialPath(System.Drawing.Rectangle)">
+            <summary>
+            Creates the bottom radial path.
+            </summary>
+            <param name="rectangle">The rectangle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.GlassButton_SizeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the SizeChanged event of the GlassButton control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.GlassButton_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MouseLeave event of the GlassButton control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.GlassButton_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Handles the MouseEnter event of the GlassButton control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.GlassButton_LostFocus(System.Object,System.EventArgs)">
+            <summary>
+            Handles the LostFocus event of the GlassButton control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.GlassButton_GotFocus(System.Object,System.EventArgs)">
+            <summary>
+            Handles the GotFocus event of the GlassButton control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.RecalcRect(System.Single)">
+            <summary>
+            Recalcs the rectangles for drawing.
+            </summary>
+            <param name="glowOpacity">The glow opacity.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.RecalcShine(System.Drawing.Rectangle)">
+            <summary>
+            Recalcs the shine.
+            </summary>
+            <param name="rect2">The rect2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.RecalcGlow(System.Single)">
+            <summary>
+            Recalcs the glow.
+            </summary>
+            <param name="glowOpacity">The glow opacity.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.RecalcContent(System.Drawing.Rectangle,System.Drawing.Rectangle@)">
+            <summary>
+            Recalcs the content.
+            </summary>
+            <param name="rect">The rect.</param>
+            <param name="rect2">The rect2.</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.RecalcOuterBorder">
+            <summary>
+            Recalcs the outer border.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.GlassButton.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.GlassButton.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.BackColor">
+            <summary>
+            Gets or sets the background color of the control.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color" /> value representing the background color.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.ForeColor">
+            <summary>
+            Gets or sets the foreground color of the control.
+            </summary>
+            <returns>The foreground <see cref="T:System.Drawing.Color" /> of the control.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.InnerBorderColor">
+            <summary>
+            Gets or sets the inner border color of the control.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color" /> value representing the color of the inner border.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.SpecialSymbolColor">
+            <summary>
+            Gets or sets the color of the special symbol.
+            </summary>
+            <value>The color of the special symbol.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.CornerRadius">
+            <summary>
+            Gets or sets the corner radius.
+            </summary>
+            <value>The corner radius.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.ToolTipText">
+            <summary>
+            Gets or sets the tool tip text.
+            </summary>
+            <value>The tool tip text.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.AlternativeForm">
+            <summary>
+            Gets or sets the alternative form.
+            </summary>
+            <value>The alternative form.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.AnimateGlow">
+            <summary>
+            Gets or sets a value indicating whether the glow is animated.
+            </summary>
+            <value><c>true</c> if glow is animated; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.ShowSpecialSymbol">
+            <summary>
+            Gets or sets a value indicating whether a special symbol is drawn.
+            </summary>
+            <value><c>true</c> if special symbol is drawn; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.SpecialSymbol">
+            <summary>
+            Gets or sets the special symbol.
+            </summary>
+            <value>The special symbol.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.AlternativeFormDirection">
+            <summary>
+            Gets or sets the alternative form direction.
+            </summary>
+            <value>The alternative form direction.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.ShowFocusBorder">
+            <summary>
+            Gets or sets a value indicating whether the focus border is shown.
+            </summary>
+            <value><c>true</c> if focus border shown; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.AlternativeFocusBorderColor">
+            <summary>
+            Gets or sets the color of the alternative focus border.
+            </summary>
+            <value>The color of the alternative focus border.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.OuterBorderColor">
+            <summary>
+            Gets or sets the outer border color of the control.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color" /> value representing the color of the outer border.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.ShineColor">
+            <summary>
+            Gets or sets the shine color of the control.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color" /> value representing the shine color.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.GlowColor">
+            <summary>
+            Gets or sets the glow color of the control.
+            </summary>
+            <returns>A <see cref="T:System.Drawing.Color" /> value representing the glow color.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.State">
+            <summary>
+            Gets the state of the button control.
+            </summary>
+            <value>The state of the button control.</value>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.FlatAppearance">
+            <summary>This property is not relevant for this class.</summary>
+            <returns>This property is not relevant for this class.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.FlatStyle">
+            <summary>This property is not relevant for this class.</summary>
+            <returns>This property is not relevant for this class.</returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.GlassButton.UseVisualStyleBackColor">
+            <summary>This property is not relevant for this class.</summary>
+            <returns>This property is not relevant for this class.</returns>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Controls.GlassButton.SpecialSymbols">
+            <summary>
+            List of all aviable special symbols.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.NameControl">
+            <summary>
+            名称选择控件
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.NameControl.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.NameControl.BindData(System.String,System.String)">
+            <summary>
+            绑定数据
+            </summary>
+            <param name="ID"></param>
+            <param name="Name"></param>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.NameControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.NameControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.NameControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Controls.PrintableListView">
+            <summary>
+            Summary description for PrintableListView.
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.PrintableListView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.PrintableListView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.PrintableListView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.PrintableListView.PageSetup">
+            <summary>
+            	Show the standard page setup dialog box that lets the user specify
+            	margins, page orientation, page sources, and paper sizes.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.PrintableListView.PrintPreview">
+            <summary>
+            	Show the standard print preview dialog box.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.PrintableListView.Print">
+            <summary>
+            	Start the print process.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.PrintableListView.FitToPage">
+            <summary>
+            	Gets or sets whether to fit the list width on a single page
+            </summary>
+            <value>
+            	<c>True</c> if you want to scale the list width so it will fit on a single page.
+            </value>
+            <remarks>
+            	If you choose false (the default value), and the list width exceeds the page width, the list
+            	will be broken in multiple page.
+            </remarks>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.PrintableListView.Title">
+            <summary>
+            	Gets or sets the title to dispaly as page header in the printed list
+            </summary>
+            <value>
+            	A <see cref="T:System.String"/> the represents the title printed as page header.
+            </value>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Controls.RowMergeGridView">
+            <summary>
+            DataGridView行合并.请对属性MergeColumnNames 赋值既可
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.RowMergeGridView.DrawCell(System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+            <summary>
+            画单元格
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.RowMergeGridView.PaintingFont(System.Windows.Forms.DataGridViewCellPaintingEventArgs,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            画字符串
+            </summary>
+            <param name="e"></param>
+            <param name="cellwidth"></param>
+            <param name="UpRows"></param>
+            <param name="DownRows"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.RowMergeGridView.AddSpanHeader(System.Int32,System.Int32,System.String)">
+            <summary>
+            合并列
+            </summary>
+            <param name="ColIndex">列的索引</param>
+            <param name="ColCount">需要合并的列数</param>
+            <param name="Text">合并列后的文本</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.RowMergeGridView.ClearSpanInfo">
+            <summary>
+            清除合并的列
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.RowMergeGridView.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.RowMergeGridView.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.RowMergeGridView.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.RowMergeGridView.MergeColumnNames">
+            <summary>
+            设置或获取合并列的集合
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.RowMergeGridView.MergeColumnHeaderBackColor">
+            <summary>
+            二维表头的背景颜色
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Controls.VistaButton">
+            <summary>
+            A replacement for the Windows Button Control.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.#ctor">
+            <summary>
+            Initialize the component with it's
+            default settings.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.Dispose(System.Boolean)">
+            <summary>
+            Release resources used by the control.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.DrawOuterStroke(System.Drawing.Graphics)">
+            <summary>
+            Draws the outer border for the control
+            using the ButtonColor property.
+            </summary>
+            <param name="g">The graphics object used in the paint event.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.DrawInnerStroke(System.Drawing.Graphics)">
+            <summary>
+            Draws the inner border for the control
+            using the HighlightColor property.
+            </summary>
+            <param name="g">The graphics object used in the paint event.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.DrawBackground(System.Drawing.Graphics)">
+            <summary>
+            Draws the background for the control
+            using the background image and the 
+            BaseColor.
+            </summary>
+            <param name="g">The graphics object used in the paint event.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.DrawHighlight(System.Drawing.Graphics)">
+            <summary>
+            Draws the Highlight over the top of the
+            control using the HightlightColor.
+            </summary>
+            <param name="g">The graphics object used in the paint event.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.DrawGlow(System.Drawing.Graphics)">
+            <summary>
+            Draws the glow for the button when the
+            mouse is inside the client area using
+            the GlowColor property.
+            </summary>
+            <param name="g">The graphics object used in the paint event.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.DrawText(System.Drawing.Graphics)">
+            <summary>
+            Draws the text for the button.
+            </summary>
+            <param name="g">The graphics object used in the paint event.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Controls.VistaButton.DrawImage(System.Drawing.Graphics)">
+            <summary>
+            Draws the image for the button
+            </summary>
+            <param name="g">The graphics object used in the paint event.</param>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.ButtonText">
+            <summary>
+            The text that is displayed on the button.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.ForeColor">
+            <summary>
+            The color with which the text is drawn.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.TextAlign">
+            <summary>
+            The alignment of the button text
+            that is displayed on the control.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.Image">
+            <summary>
+            The image displayed on the button that 
+            is used to help the user identify
+            it's function if the text is ambiguous.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.ImageAlign">
+            <summary>
+            The alignment of the image 
+            in relation to the button.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.ImageSize">
+            <summary>
+            The size of the image to be displayed on the
+            button. This property defaults to 24x24.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.ButtonStyle">
+            <summary>
+            Sets whether the button background is drawn 
+            while the mouse is outside of the client area.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.CornerRadius">
+            <summary>
+            The radius for the button corners. The 
+            greater this value is, the more 'smooth' 
+            the corners are. This property should
+             not be greater than half of the 
+             controls height.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.HighlightColor">
+            <summary>
+            The colour of the highlight on the top of the button.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.ButtonColor">
+            <summary>
+            The bottom color of the button that 
+            will be drawn over the base color.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.GlowColor">
+            <summary>
+            The colour that the button glows when
+            the mouse is inside the client area.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.BackImage">
+            <summary>
+            The background image for the button, 
+            this image is drawn over the base 
+            color of the button.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Controls.VistaButton.BaseColor">
+            <summary>
+            The backing color that the rest of 
+            the button is drawn. For a glassier 
+            effect set this property to Transparent.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Controls.VistaButton.State">
+            <summary>
+            A private enumeration that determines 
+            the mouse state in relation to the 
+            current instance of the control.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Controls.VistaButton.Style">
+            <summary>
+            A public enumeration that determines whether
+            the button background is painted when the 
+            mouse is not inside the ClientArea.
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.VistaButton.Style.Default">
+            <summary>
+            Draw the button as normal
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Controls.VistaButton.Style.Flat">
+            <summary>
+            Only draw the background on mouse over.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Camera">
+            <summary>
+            摄像头封装类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Camera.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            构造器
+            </summary>
+            <param name="ctrl">视频窗口宿主的托管控件</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Camera.Open">
+            <summary>
+            启动摄像头
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Camera.Close">
+            <summary>
+            关闭摄像头
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Camera.GrabImage(System.String)">
+            <summary>
+            抓图保存到文件
+            </summary>
+            <param name="bmpPath">要保存bmp文件的路径</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Camera.GrabImage">
+            <summary>
+            抓图
+            </summary>
+            <returns>抓到的图像</returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Camera.StartKinescope(System.String)">
+            <summary>
+            开始录像
+            </summary>
+            <param name="aviPath">要保存avi文件的路径</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Camera.StopKinescope">
+            <summary>
+            停止录像
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.Camera.RecievedFrame">
+            <summary>
+            接受到一帧的事件
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.Camera.CameraConnected">
+            <summary>
+            摄像头连接成功的事件
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Camera.State">
+            <summary>
+            摄像头的状态
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.CameraState">
+            <summary>
+            摄像头状态
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.CameraState.Closed">
+            <summary>
+            关闭状态
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.CameraState.Opend">
+            <summary>
+            打开状态
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.CameraState.Scoping">
+            <summary>
+            录像中
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.RecievedFrameEventHandler">
+            <summary>
+            接收到帧的事件处理参数
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.CameraConnectedEventHandler">
+            <summary>
+            摄像头连接成功的参数
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.CameraConntectedEventArgs">
+            <summary>
+            摄像头连接成功的事件
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.AviCap32Helper">
+            <summary>
+            AviCap的封装类
+            AviCap包含了执行视频捕获的函数，它给AVI文件I/O和视频、音频设备驱动程序提供一个高级接口
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.CameraDialog">
+            <summary>
+            摄像头图形显示窗体
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.CameraDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.CameraDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.CameraDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.CameraDialog.Photo">
+            <summary>
+            摄像头图片对象
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.CardReader">
+            <summary>
+            读卡器封装类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.CardReader.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            构造器
+            </summary>
+            <param name="hostCtrl">接受键盘事件的宿主控件</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.CardReader.IsCardCode(System.String)">
+            <summary>
+            判断是否卡号
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.CardReader.timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            定时器到期的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.CardReader.hostCtrl_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            监听按键弹起的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.CardReader.CardRead">
+            <summary>
+            读卡器读到一张卡的事件
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.CardReader.Default">
+            <summary>
+            默认读卡器（挂在主窗体上，会被主窗体初始化，在模块里用肯定是安全的）
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.CardReadEventHandler">
+            <summary>
+            读卡器读到一张卡的事件处理委托
+            </summary>
+            <param name="cardCode"></param>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.COMScanner">
+            <summary>
+            串口条码扫描器封装类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.COMScanner.#ctor(System.String)">
+            <summary>
+            构造器
+            </summary>
+            <param name="portName">串口号，比如"COM1"</param>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.COMScanner.ScannerRead">
+            <summary>
+            扫描器读到一个扫描码的事件
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.DeviceReaderDialog">
+            <summary>
+            读卡器、USB条码扫描器、串口条码扫描器数据读取及显示窗体
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.DeviceReaderDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.DeviceReaderDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.DeviceReaderDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.DeviceType">
+            <summary>
+            设备类型
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.FrmImageView">
+            <summary>
+            图片显示窗体
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmImageView.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImageView.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmImageView.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.FrmPosPrintPreview">
+            <summary>
+            POS小票打印的打印预览管理界面
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmPosPrintPreview.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmPosPrintPreview.RefreshPrintSetting">
+            <summary>
+            刷新打印设置
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmPosPrintPreview.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmPosPrintPreview.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmPosPrintPreview.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmPosPrintPreview.PrintString">
+            <summary>
+            设置待打印的内容
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmPosPrintPreview.PrinterName">
+            <summary>
+            指定默认的小票打印机名称，用作快速POS打印
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmPosPrintPreview.POSPageMargin">
+            <summary>
+            POS打印机的边距,默认为2
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmPosPrintPreview.Landscape">
+            <summary>
+            POS打印机默认横向还是纵向，默认设置为纵向(false)
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.FrmSetPrinterName">
+            <summary>
+            设置打印机名称的窗体
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmSetPrinterName.ListAllPrinterName">
+            <summary>
+            在列表框中列出所有的打印机
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.FrmSetPrinterName.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmSetPrinterName.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FrmSetPrinterName.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmSetPrinterName.DefaultPrinterName">
+            <summary>
+            默认的打印机名称
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FrmSetPrinterName.SaveConfigName">
+            <summary>
+            保存的配置名称节点
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.SavePortraitHandler">
+            <summary>
+            保存图片的处理代理定义
+            </summary>
+            <param name="id">记录ID</param>
+            <param name="imageBytes">图片数据</param>
+            <param name="imageType">图片类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.BindPortraitHandler">
+            <summary>
+            绑定图片数据的代理定义
+            </summary>
+            <param name="id">记录ID</param>
+            <param name="imageType">图片类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.PortraitControl">
+            <summary>
+            图片数据显示和采集控件
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.PortraitControl.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.PortraitControl.SavePicture(System.String)">
+            <summary>
+            保存图片到服务器
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.PortraitControl.ResetDefaultImage(System.String)">
+            <summary>
+            重置默认图片，可以选择“个人肖像”、“车辆图片”，其他值将显示空白
+            </summary>
+            <param name="imageType"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.PortraitControl.BindPicture(System.String)">
+            <summary>
+            绑定图片的操作，触发绑定事件处理
+            </summary>
+            <param name="id">记录ID</param>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.PortraitControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.PortraitControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.PortraitControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.PortraitControl.OnSavePortrait">
+            <summary>
+            保存图片操作的事件
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.PortraitControl.OnBindPortait">
+            <summary>
+            绑定图片数据的事件
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.PortraitControl.ID">
+            <summary>
+            记录ID
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.PortraitControl.ImageIsDirty">
+            <summary>
+            图片是否被修改过
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.PortraitControl.ImageType">
+            <summary>
+            图片类型
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.PortraitControl.ShowEditTool">
+            <summary>
+            是否显示编辑工具条
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.USBScanner">
+            <summary>
+            USB条码扫描器的封装类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.USBScanner.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            构造器
+            </summary>
+            <param name="hostCtrl">接受键盘事件的宿主控件</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.USBScanner.timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            定时器到期的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.USBScanner.hostCtrl_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            监听按键弹起的事件
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.USBScanner.ScannerRead">
+            <summary>
+            扫描器读到一个扫描码的事件
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.USBScanner.Default">
+            <summary>
+            默认扫描器（挂在主窗体上，会被主窗体初始化，在模块里用肯定是安全的）
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.ScannerReadEventHandler">
+            <summary>
+            扫描器读到一个条码的事件处理委托
+            </summary>
+            <param name="scanCode"></param>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.FileManagerStatus">
+            <summary>
+            文件管理状态
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.FileManagerWrapper">
+            <summary>
+            文件管理包装类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FileManagerWrapper.#cctor">
+            <summary>
+            静态构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FileManagerWrapper.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.FileManagerWrapper.CreatePage(System.Boolean)">
+            <summary>
+            创建页面
+            </summary>
+            <param name="register"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FileManagerWrapper.FileManager">
+            <summary>
+            文件管理对象
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FileManagerWrapper.Count">
+            <summary>
+            文件数量
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.FileManagerWrapper.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.LocalReportPrinter">
+            <summary>
+            本地报表文件无界面打印类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.#ctor(Microsoft.Reporting.WinForms.LocalReport)">
+            <summary>
+            
+            </summary>
+            <param name="report"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            
+            </summary>
+            <param name="reportName"></param>
+            <param name="dataSourceDict"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.CreateDefaultPrintSettings">
+            <summary>
+            创建默认的打印配置信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.CancelPrint(System.Int32)">
+            <summary>
+            取消打印
+            </summary>
+            <param name="millisecondsTimeout"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.Print">
+            <summary>
+            打印
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.Print(System.Drawing.Printing.PrinterSettings)">
+            <summary>
+            打印
+            </summary>
+            <param name="printerSettings"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.CreateEMFDeviceInfo(System.Int32,System.Int32)">
+            <summary>
+            创建打印设备信息
+            </summary>
+            <param name="startPage">开始页码</param>
+            <param name="endPage">结束页码</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.GetReportNameForFile">
+            <summary>
+            获取打印时显示的名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.BeginAsyncRender(System.String,System.Boolean,System.String,Microsoft.Reporting.WinForms.PageCountMode,Microsoft.ReportingServices.Interfaces.CreateAndRegisterStream,System.ComponentModel.AsyncCompletedEventHandler,System.Boolean)">
+            <summary>
+            开始执行异步打印
+            </summary>
+            <param name="format"></param>
+            <param name="allowInternalRenderers"></param>
+            <param name="deviceInfo"></param>
+            <param name="pageCountMode"></param>
+            <param name="createStreamCallback"></param>
+            <param name="onCompleteCallback"></param>
+            <param name="isPartialRendering"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.CreateStreamEMFPrintOnly(System.String,System.String,System.Text.Encoding,System.String,System.Boolean,Microsoft.ReportingServices.Interfaces.StreamOper)">
+            <summary>
+            创建打印页面的内容流
+            </summary>
+            <param name="name"></param>
+            <param name="extension"></param>
+            <param name="encoding"></param>
+            <param name="mimeType"></param>
+            <param name="useChunking"></param>
+            <param name="operation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.LocalReportPrinter.OnRenderingCompletePrintOnly(System.Object,System.ComponentModel.AsyncCompletedEventArgs)">
+            <summary>
+            打印完成后事件处理函数
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.PrintCompleteHandler">
+            <summary>
+            但因完成委托处理
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.PrintCompletedEventArgs">
+            <summary>
+            打印完成参数对象
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.ReportHelper">
+            <summary>
+            报表打印辅助类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportHelper.LoadReport(Microsoft.Reporting.WinForms.LocalReport,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            通过报表名称加载报表
+            </summary>
+            <param name="report">LocalReport对象</param>
+            <param name="reportName">报表名称（不带".rdlc"）</param>
+            <param name="dataSourceDict">数据源集合</param>
+            <param name="parameters">参数集合</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportHelper.LoadReportWithPath(Microsoft.Reporting.WinForms.LocalReport,System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            通过报表相对路径，加载报表
+            </summary>
+            <param name="report">LocalReport对象</param>
+            <param name="reportPath">报表文件相对路径（带".rdlc"后缀）</param>
+            <param name="dataSourceDict">数据源集合</param>
+            <param name="parameters">参数集合</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportHelper.Print(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            打印报表
+            </summary>
+            <param name="reportName">报表名称</param>
+            <param name="dataSourceDict">报表数据集和数据源的映射关系</param>
+            <param name="parameters">报表参数集合</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportHelper.PrintWithPath(System.String,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            根据报表文件路径，打印报表
+            </summary>
+            <param name="reportName">报表名称</param>
+            <param name="dataSourceDict">报表数据集和数据源的映射关系</param>
+            <param name="parameters">报表参数集合</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportHelper.ConvertImageToBase64(System.Drawing.Image,System.Drawing.Imaging.ImageFormat)">
+            <summary>
+            转换Image对象为Base64字符串
+            </summary>
+            <param name="image">Image对象</param>
+            <param name="format">图片格式</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.ReportViewerDialog">
+            <summary>
+            通用的RDLC报表的查看器
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportViewerDialog.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.ReportViewerDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportViewerDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.ReportViewerDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.ReportViewerDialog.ReportName">
+            <summary>
+            报表名称（默认在Resource/Report目录下）
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.ReportViewerDialog.ReportFilePath">
+            <summary>
+            指定报表的相对路径（包括rdlc后缀名的相对路径），如果指定该属性，则ReportName不用指定
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.ReportViewerDialog.DataSourceDict">
+            <summary>
+            报表和数据源映射关系：报表对应表名称和绑定数据源的表名映射关系。
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.ReportViewerDialog.Parameters">
+            <summary>
+            报表参数的名称和值的集合
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.ReportViewerDialog.IsPrintLayout">
+            <summary>
+            是否设置为打印布局
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.BaseDock">
+            <summary>
+            用于一般列表界面的基类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.ProcessDataSaved(System.Object,System.EventArgs)">
+            <summary>
+            处理数据保存后的事件触发
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.WriteException(System.Exception)">
+            <summary>
+            记录异常
+            </summary>
+            <param name="ex">异常信息</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.ProcessException(System.Exception)">
+            <summary>
+            处理异常信息
+            </summary>
+            <param name="ex">异常</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.FormOnLoad">
+            <summary>
+            可供重写的窗体加载函数，子窗体特殊处理只需重写该函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>
+            控件添加后的事件处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.OnLoad(System.EventArgs)">
+            <summary>
+            重写窗体加载事件
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.InitFunction(WHC.Framework.Commons.LoginUserInfo,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            初始化权限控制信息
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.HasFunction(System.String)">
+            <summary>
+            是否具有访问指定控制ID的权限
+            </summary>
+            <param name="controlId">功能控制ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.OnLoadFormActived(System.String)">
+            <summary>
+            窗体激活的事件处理
+            </summary>
+            <param name="json">传递的参数内容，自定义JSON格式</param>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.BaseDock.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseDock.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.BaseDock.OnDataSaved">
+            <summary>
+            子窗体数据保存的触发
+            </summary>
+        </member>
+        <member name="E:WHC.Framework.BaseUI.BaseDock.LoadFormActived">
+            <summary>
+            使用ChildWinManagement辅助类处理多文档加载的窗体，在构建或激活后，触发一个通知窗体的事件，方便传递相关参数到目标窗体。
+            为了更加通用的处理，传递的参数使用JSON定义格式的字符串。
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseDock.DataFilterCondition">
+            <summary>
+            进行数据过滤的Sql条件，默认通过 Cache.Instance["DataFilterCondition"]获取
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseDock.SelectedCompanyID">
+            <summary>
+            选择查看的公司ID
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseDock.LoginUserInfo">
+            <summary>
+            登陆用户基础信息
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseDock.FunctionDict">
+            <summary>
+            登录用户具有的功能字典集合
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.BaseDock.AppInfo">
+            <summary>
+            应用程序基础信息
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.BaseDock.FormActiveHandler">
+            <summary>
+            定义一个窗体激活后的处理委托类型
+            </summary>
+            <param name="json"></param>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.BaseEditForm">
+            <summary>
+            编辑界面基类
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.DisplayData">
+            <summary>
+            显示数据到控件上
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.CheckInput">
+            <summary>
+            检查输入的有效性
+            </summary>
+            <returns>有效</returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.ClearScreen">
+            <summary>
+            清除屏幕
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.ClearControlValue(System.Windows.Forms.Control)">
+            <summary>
+            清除容器里面某些控件的值
+            </summary>
+            <param name="ctrl">容器类控件</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.ClearSinglelValue(System.Windows.Forms.Control)">
+            <summary>
+            清除容器里面某些控件的值
+            </summary>
+            <param name="ctrl">容器类控件</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.SaveEntity">
+            <summary>
+            保存数据（新增和编辑的保存）
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.SaveUpdated">
+            <summary>
+            更新已有的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.SaveAddNew">
+            <summary>
+            保存新增的数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.SaveEntity(System.Boolean)">
+            <summary>
+            保存
+            </summary>
+            <param name="close">关闭窗体</param>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.BaseEditForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.BaseEditForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.DataNavigator">
+            <summary>
+            记录导航控件
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.DataNavigator.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.DataNavigator.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.DataNavigator.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.DataNavigator.CurrentIndex">
+            <summary>
+            获取或设置索引值
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.EtchedLine">
+            <summary>
+            Summary description for EtchedLine.
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.EtchedLine.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.EtchedLine.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.EtchedLine.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.FirefoxDialog">
+            <summary>
+            参数配置界面控件
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.FirefoxDialog.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.FirefoxDialog.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.FirefoxDialog.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.FirefoxDialog.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.FirefoxDialog.Pages">
+            <summary>
+            参数页面对象
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.FirefoxDialog.ImageList">
+            <summary>
+            图片列表
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.ImageMapEditor">
+            <summary>
+            Summary description for ImageEditor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.MozItem">
+            <summary>
+            Summary description for MozItem.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozItem.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozItem.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.MozItemEventArgs.m_mozItem">
+            <summary>
+            The MozItem that generated the event
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozItemEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the MozItemEventArgs class with default settings
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.MozItemClickEventArgs.m_mozItem">
+            <summary>
+            The MozItem that generated the event
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozItemClickEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the MozItemEventArgs class with default settings
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.ImageChangedEventArgs.m_image">
+            <summary>
+            The image that has changed
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.ImageChangedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the MozItemEventArgs class with default settings
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.MozPane">
+            <summary>
+            Summary description for MozPane.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.ScrollableControlWithScrollEvents">
+             <summary>
+             Adds the missing scroll events to the scrollable control!
+             Written by Martin Randall - Thursday 17th June, 2004
+            
+            
+             Modified by Patrik Bohman , May 2005
+             
+             </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.ScrollableControlWithScrollEvents.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Intercept scroll messages to send notifications
+            </summary>
+            <param name="m">Message parameters</param>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.ScrollableControlWithScrollEvents.GetEventType(System.UInt32)">
+            <summary>
+            Decode the type of scroll message
+            </summary>
+            <param name="wParam">Lower word of scroll notification</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozPane.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozPane.BeginInit">
+            <summary>
+            Signals the MozPane that initialization is starting
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozPane.EndInit">
+            <summary>
+            Signals the MozPane that initialization is complete
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozPane.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.MozPane.MozItemCollection">
+            <summary>
+            Represents a collection of MozItem objects
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.MozPane.MozItemCollection.owner">
+            <summary>
+            The MozPane that owns this MozItemsCollection
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.MozPane.MozItemCollectionEditor">
+            <summary>
+            A custom CollectionEditor for editing MozItemCollections
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.ItemColorChangedEventArgs.m_color">
+            <summary>
+            The color that has changed
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.ItemColorChangedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the MozItemEventArgs class with default settings
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.ItemBorderStyleChangedEventArgs.m_state">
+            <summary>
+            The MozItem that generated the event
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.ItemBorderStyleChangedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the MozItemEventArgs class with default settings
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.BaseUI.Settings.MozScrollEventArgs.m_type">
+            <summary>
+            The color that has changed
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.MozScrollEventArgs.#ctor(System.Windows.Forms.ScrollEventType,System.Int32,WHC.Framework.BaseUI.Settings.SCROLLINFO)">
+            <summary>
+            Initializes a new instance of the MozItemEventArgs class with default settings
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.ThemeManager">
+            <summary>
+            Summary description for ThemeManager.
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Settings.PageProp">
+            <summary>
+            页面对象信息
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.PageProp.Text">
+            <summary>
+            控件文本显示
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.PageProp.ImageIndex">
+            <summary>
+            控件图片对象
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.PageProp.Page">
+            <summary>
+            PropertyPage对象
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.PageProp.MozItem">
+            <summary>
+            MozItem对象
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.PropertyPage.#ctor">
+            <summary>
+            初始化函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.PropertyPage.OnInit">
+            <summary>
+            初始化代码
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.PropertyPage.OnSetActive">
+            <summary>
+            页面激活的处理
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.BaseUI.Settings.PropertyPage.OnApply">
+            <summary>
+            保存数据事件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.PropertyPage.IsInit">
+            <summary>
+            是否已经初始化
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.PropertyPage.Text">
+            <summary>
+            控件文本显示
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Settings.PropertyPage.Image">
+            <summary>
+            控件图片对象
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.BaseUI.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.BaseUI.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+    </members>
+</doc>

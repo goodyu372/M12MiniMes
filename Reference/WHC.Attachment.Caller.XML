@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WHC.Attachment.Caller</name>
+    </assembly>
+    <members>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.Upload(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件（根据配置文件选择合适的上传方式）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.UploadByFTP(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件(以FTP方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.UploadByNormal(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件（以文件方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.Download(System.String)">
+            <summary>
+            获取单一的文件数据（包含文件字节数据）
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.Download2(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            获取单一的文件数据（包含文件字节数据）,如果指定了图片的高度，宽度，那么下载缩略图
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetAllByUser(System.String)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetAllByUser2(System.String,System.String,WHC.Pager.Entity.PagerInfo@)">
+            <summary>
+            获取指定用户的上传信息
+            </summary>
+            <param name="userId">用户ID</param>
+            <param name="category">附件分类：个人附件，业务附件</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetByAttachGUID(System.String)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetByAttachGUID2(System.String,WHC.Pager.Entity.PagerInfo@)">
+            <summary>
+            获取指定附件组GUID的附件信息
+            </summary>
+            <param name="attachmentGUID">附件组GUID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetByOwner(System.String)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetByOwner2(System.String,WHC.Pager.Entity.PagerInfo@)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <param name="pagerInfo">分页信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetByOwnerAndAttachGUID(System.String,System.String)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetByOwnerAndAttachGUID2(System.String,System.String,WHC.Pager.Entity.PagerInfo@)">
+            <summary>
+            根据Owner获取对应的附件列表
+            </summary>
+            <param name="ownerID">拥有者ID</param>
+            <param name="attachmentGUID">附件组GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.DeleteByFilePath(System.String,System.String)">
+            <summary>
+            根据用户Id和文件相对路径删除记录
+            </summary>
+            <param name="relativeFilePath">文件相对路径</param>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.DeleteByAttachGUID(System.String)">
+            <summary>
+            删除指定Attachment_GUID的数据记录
+            </summary>
+            <param name="attachment_GUID">附件的attachmentGUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetFileNames(System.String)">
+            <summary>
+            根据附件GUID获取相关的文件名称列表
+            </summary>
+            <param name="attachmentGUID">附件GUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetFirstFilePath(System.String)">
+            <summary>
+            根据attachmentGUID的参数获取对应的第一个文件路径
+            </summary>
+            <param name="attachmentGUID">附件的attachmentGUID</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.Facade.IFileUploadService.GetFilePath(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            检查输入及组合路径
+            </summary>
+            <param name="info">上传文件信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.ServiceCaller.EndPointConfig">
+            <summary>
+            终结点配置项名称列表
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.ServiceCaller.EndPointConfig.WcfConfig">
+            <summary>
+            WCF配置文件路径
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.ServiceCaller.FileUploadCaller.CreateClient">
+            <summary>
+            子类构造一个IChannel对象转换为基类接口，方便给基类进行调用通用的API
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.ServiceCaller.FileUploadCaller.CreateSubClient">
+            <summary>
+            创建一个强类型接口对象，供本地调用
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.ServiceCaller.FileUploadCaller.UploadByFTP(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件(以FTP方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.ServiceCaller.FileUploadCaller.UploadByNormal(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件（以文件方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Attachment.WebApiCaller.ApiConfig">
+            <summary>
+            Web API配置项名称列表
+            </summary>
+        </member>
+        <member name="F:WHC.Attachment.WebApiCaller.ApiConfig.ConfigFileName">
+            <summary>
+            WCF配置文件路径
+            </summary>
+        </member>
+        <member name="T:WHC.Attachment.WebApiCaller.FileUploadCaller">
+            <summary>
+            上传附件信息, 基于API服务的Facade接口实现类
+            </summary>
+        </member>
+        <member name="M:WHC.Attachment.WebApiCaller.FileUploadCaller.ConvertExcelFileToTable(System.String)">
+            <summary>
+            从附件列表中获取第一个Excel文件，并转换Excel数据为对应的DataTable返回
+            </summary>
+            <param name="guid">附件的Guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.WebApiCaller.FileUploadCaller.UploadByFTP(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件(以FTP方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Attachment.WebApiCaller.FileUploadCaller.UploadByNormal(WHC.Attachment.Entity.FileUploadInfo)">
+            <summary>
+            上传文件（以文件方式上传）
+            </summary>
+            <param name="info">文件信息（包含流数据）</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

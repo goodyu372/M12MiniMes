@@ -1,0 +1,192 @@
+﻿1>------ 已启动全部重新生成: 项目: WHC.Framework.Language, 配置: Debug Any CPU ------
+2>------ 已启动全部重新生成: 项目: WHC.Pager.Entity, 配置: Debug Any CPU ------
+3>------ 已启动全部重新生成: 项目: M12MiniMes.Core, 配置: Debug Any CPU ------
+2>  WHC.Pager.Entity -> D:\Faster\App\3rdDlls\WHC.Pager.Entity.dll
+3>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2081,5): warning MSB3270: 所生成项目的处理器架构“MSIL”与引用“System.Data.SQLite”的处理器架构“x86”不匹配。这种不匹配可能会导致运行时失败。请考虑通过配置管理器更改您的项目的目标处理器架构，以使您的项目与引用间的处理器架构保持一致，或者为引用关联一个与您的项目的目标处理器架构相符的处理器架构。
+3>  M12MiniMes.Core -> D:\Faster\App\3rdDlls\M12MiniMes.Core.dll
+1>D:\Git\M12MiniMes\WHC.Framework.Language\MultiLanuage\JsonLanguage.cs(155,22,155,30): warning CS0219: 变量“modified”已被赋值，但从未使用过它的值
+1>  WHC.Framework.Language -> D:\Faster\App\3rdDlls\WHC.Framework.Language.dll
+4>------ 已启动全部重新生成: 项目: WHC.Framework.Commons, 配置: Debug Any CPU ------
+5>------ 已启动全部重新生成: 项目: WHC.Pager.WinControlDx, 配置: Debug Any CPU ------
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Extension\StringExtensionMethod.cs(33,56,33,72): warning CS3001: 参数类型“IConvertible”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\ByteHelper.cs(156,53,156,60): warning CS3001: 参数类型“ushort”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\ByteHelper.cs(197,50,197,55): warning CS3001: 参数类型“ushort”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\ByteHelper.cs(220,48,220,53): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\ByteHelper.cs(243,49,243,54): warning CS3001: 参数类型“ulong”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\ByteHelper.cs(261,50,261,55): warning CS3001: 参数类型“ushort”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\ByteHelper.cs(275,50,275,55): warning CS3001: 参数类型“ushort”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\HexHelper.cs(16,47,16,53): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\HexHelper.cs(31,49,31,55): warning CS3001: 参数类型“ushort”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\HexHelper.cs(46,48,46,54): warning CS3001: 参数类型“ulong”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\JsonHelper.cs(200,30,200,36): warning CS3005: 仅大小写不同的标识符“JsonHelper.ToJson(object)”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\JsonHelper.cs(238,30,238,36): warning CS3005: 仅大小写不同的标识符“JsonHelper.ToJson(IEnumerable)”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\JsonHelper.cs(276,30,276,36): warning CS3005: 仅大小写不同的标识符“JsonHelper.ToJson(DataSet)”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\JsonHelper.cs(294,30,294,36): warning CS3005: 仅大小写不同的标识符“JsonHelper.ToJson(DataTable)”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\JsonHelper.cs(330,30,330,36): warning CS3005: 仅大小写不同的标识符“JsonHelper.ToJson(DataTable, string)”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\JsonHelper.cs(367,30,367,36): warning CS3005: 仅大小写不同的标识符“JsonHelper.ToJson(DbDataReader)”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Extension\StringExtensionMethod.cs(115,30,115,38): warning CS3002: “StringExtensionMethod.ToUInt64(string, ulong)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Extension\StringExtensionMethod.cs(115,63,115,75): warning CS3001: 参数类型“ulong”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Extension\StringExtensionMethod.cs(127,28,127,36): warning CS3002: “StringExtensionMethod.ToUInt32(string, uint)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Extension\StringExtensionMethod.cs(127,59,127,71): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Extension\StringExtensionMethod.cs(140,30,140,38): warning CS3002: “StringExtensionMethod.ToUInt16(string, ushort)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Extension\StringExtensionMethod.cs(140,63,140,75): warning CS3001: 参数类型“ushort”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\HexHelper.cs(61,28,61,34): warning CS3002: “HexHelper.ToUInt(string)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\HexHelper.cs(71,29,71,36): warning CS3002: “HexHelper.ToULong(string)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\HexHelper.cs(81,30,81,38): warning CS3002: “HexHelper.ToUShort(string)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\ByteHelper.cs(431,30,431,38): warning CS3002: “ByteHelper.ToUInt16(byte[])”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\CRCUtils.cs(62,30,62,35): warning CS3002: “CrcUtils.CRC16(byte[])”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Others\CSocket.cs(42,30,42,42): warning CS3006: 仅 ref 或 out 有区别，或者仅数组秩不同的重载方法“CSocket.GetHtmlByUrl(ref string, WebProxy, int, bool, string)”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\CRCUtils.cs(77,30,77,35): warning CS3002: “CrcUtils.CRC16(string, Encoding)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\CRCUtils.cs(87,30,87,35): warning CS3002: “CrcUtils.CRC16(string)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\CRCUtils.cs(97,28,97,33): warning CS3002: “CrcUtils.CRC32(byte[])”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\CRCUtils.cs(112,28,112,33): warning CS3002: “CrcUtils.CRC32(string, Encoding)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\CRCUtils.cs(122,28,122,33): warning CS3002: “CrcUtils.CRC32(string)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\File\DirectoryUtil.cs(59,65,59,78): warning CS3001: 参数类型“ulong”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\File\DirectoryUtil.cs(72,29,72,41): warning CS3002: “DirectoryUtil.GetFreeSpace(string)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\File\DirectoryUtil.cs(93,29,93,57): warning CS3002: “DirectoryUtil.ConvertByteCountToKByteCount(ulong)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\File\DirectoryUtil.cs(93,64,93,73): warning CS3001: 参数类型“ulong”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\File\DirectoryUtil.cs(103,65,103,75): warning CS3001: 参数类型“ulong”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\GDI.cs(79,21,79,44): warning CS3009: '“GDI.TernaryRasterOperations”: 基类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Device\HardwareInfoHelper.cs(426,25,426,33): warning CS3003: “HardwareInfoHelper.HardDiskInfo.Capacity”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(137,55,137,62): warning CS3001: 参数类型“sbyte[]”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(2326,50,2326,60): warning CS3001: 参数类型“sbyte[]”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(2369,31,2369,43): warning CS3002: “IdentifyEncoding.ToSByteArray(byte[])”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(2393,80,2393,86): warning CS3001: 参数类型“sbyte[]”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(2424,88,2424,94): warning CS3001: 参数类型“sbyte[]”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(2477,29,2477,37): warning CS3002: “IdentifyEncoding.Identity(ulong)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(2477,44,2477,51): warning CS3001: 参数类型“ulong”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\WindowMessage.cs(175,27,175,40): warning CS3003: “WindowMessage.MF_BYPOSITION”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\DGVPrinter.cs(258,24,258,30): warning CS3008: 标识符“_Owner”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\DGVPrinter.cs(271,26,271,43): warning CS3008: 标识符“_PrintPreviewZoom”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\RegisterHotKeyHelper.cs(132,21,132,27): warning CS3005: 仅大小写不同的标识符“RegisterHotKeyHelper.MODKEY”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(199,21,199,31): warning CS3005: 仅大小写不同的标识符“NativeMethods.SHOWWINDOW”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(25,57,25,65): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(65,58,65,68): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(113,36,113,49): warning CS3002: “NativeMethods.GetWindowLong(IntPtr, int)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(126,35,126,59): warning CS3002: “NativeMethods.GetWindowThreadProcessId(IntPtr, out uint)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(126,82,126,95): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(134,77,134,83): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(143,69,143,72): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(153,120,153,126): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(165,104,165,114): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(172,84,172,89): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(173,48,173,55): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(199,21,199,31): warning CS3009: '“NativeMethods.SHOWWINDOW”: 基类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(218,21,218,39): warning CS3009: '“NativeMethods.GetWindowConstants”: 基类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(240,21,240,36): warning CS3009: '“NativeMethods.WindowShowStyle”: 基类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(321,29,321,39): warning CS3003: “NativeMethods.SWP_NOSIZE”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(322,29,322,39): warning CS3003: “NativeMethods.SWP_NOMOVE”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(323,29,323,41): warning CS3003: “NativeMethods.SWP_NOZORDER”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(324,29,324,41): warning CS3003: “NativeMethods.SWP_NOREDRAW”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(325,29,325,43): warning CS3003: “NativeMethods.SWP_NOACTIVATE”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(326,29,326,45): warning CS3003: “NativeMethods.SWP_FRAMECHANGED”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(327,29,327,43): warning CS3003: “NativeMethods.SWP_SHOWWINDOW”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(328,29,328,43): warning CS3003: “NativeMethods.SWP_HIDEWINDOW”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(329,29,329,43): warning CS3003: “NativeMethods.SWP_NOCOPYBITS”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(330,29,330,46): warning CS3003: “NativeMethods.SWP_NOOWNERZORDER”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(331,29,331,47): warning CS3003: “NativeMethods.SWP_NOSENDCHANGING”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(344,21,344,23): warning CS3009: '“NativeMethods.WM”: 基类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(1266,21,1266,33): warning CS3009: '“NativeMethods.WindowStyles”: 基类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(1552,21,1552,32): warning CS3009: '“NativeMethods.ClassStyles”: 基类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(1575,28,1575,40): warning CS3003: “NativeMethods.TARGETWINDOW”的类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(1597,35,1597,50): warning CS3002: “NativeMethods.SHAppBarMessage(int, out NativeMethods.APPBARDATA)”的返回类型不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\NativeMethods.cs(1849,74,1849,84): warning CS3001: 参数类型“uint”不符合 CLS
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\SmtpServerHelper.cs(839,30,839,33): warning CS0168: 声明了变量“err”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Database\OleDbHelper.cs(75,38,75,40): warning CS0168: 声明了变量“ex”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Image\MyScreenCapture.cs(357,30,357,32): warning CS0168: 声明了变量“ex”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\FileServerManage.cs(29,24,29,57): warning CS0618: '“ConfigurationSettings.AppSettings”已过时:“This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\FileServerManage.cs(30,29,30,62): warning CS0618: '“ConfigurationSettings.AppSettings”已过时:“This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\FileServerManage.cs(31,29,31,62): warning CS0618: '“ConfigurationSettings.AppSettings”已过时:“This method is obsolete, it has been replaced by System.Configuration!System.Configuration.ConfigurationManager.AppSettings”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(36,13,37,83): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(47,13,48,98): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(84,13,84,55): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(99,13,99,55): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(116,13,116,55): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(132,13,132,55): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\FileServerManage.cs(161,33,161,42): warning CS0168: 声明了变量“exception”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(148,13,148,55): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\JavascriptHelper.cs(162,13,162,55): warning CS0618: '“Page.RegisterStartupScript(string, string)”已过时:“The recommended alternative is ClientScript.RegisterStartupScript(Type type, string key, string script). http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\FileServerManage.cs(191,33,191,42): warning CS0168: 声明了变量“exception”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Web\FileServerManage.cs(231,33,231,42): warning CS0168: 声明了变量“exception”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Others\CSocket.cs(151,33,151,35): warning CS0168: 声明了变量“we”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\FTPHelper.cs(403,54,403,79): warning CS0618: '“Dns.GetHostByName(string)”已过时:“GetHostByName is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\HttpHelper.cs(277,30,277,31): warning CS0168: 声明了变量“e”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\FTPHelper.cs(602,46,602,71): warning CS0618: '“Dns.GetHostByName(string)”已过时:“GetHostByName is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\HttpHelper.cs(374,30,374,31): warning CS0168: 声明了变量“e”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\HttpHelper.cs(459,30,459,31): warning CS0168: 声明了变量“e”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Device\HardwareInfoHelper.cs(161,44,161,60): warning CS0618: '“Registry.DynData”已过时:“The DynData registry key only works on Win9x, which is no longer supported by the CLR.  On NT-based operating systems, use the PerformanceData registry key instead.”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Device\HardwareInfoHelper.cs(167,34,167,50): warning CS0618: '“Registry.DynData”已过时:“The DynData registry key only works on Win9x, which is no longer supported by the CLR.  On NT-based operating systems, use the PerformanceData registry key instead.”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Device\HardwareInfoHelper.cs(211,43,211,59): warning CS0618: '“Registry.DynData”已过时:“The DynData registry key only works on Win9x, which is no longer supported by the CLR.  On NT-based operating systems, use the PerformanceData registry key instead.”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(362,129,362,157): warning CS0652: 与整数常量比较无意义；该常量不在“sbyte”类型的范围之内
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(362,97,362,125): warning CS0652: 与整数常量比较无意义；该常量不在“sbyte”类型的范围之内
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(362,67,362,91): warning CS0652: 与整数常量比较无意义；该常量不在“sbyte”类型的范围之内
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\IdentifyEncoding.cs(362,39,362,63): warning CS0652: 与整数常量比较无意义；该常量不在“sbyte”类型的范围之内
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\HttpHelper.cs(698,33,698,38): warning CS0168: 声明了变量“webex”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Image\WebPreview.cs(58,44,58,68): warning CS0618: '“ExecutionEngineException”已过时:“This type previously indicated an unspecified fatal error in the runtime. The runtime no longer raises this exception so this type is obsolete.”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\ProxyHelper.cs(112,30,112,56): warning CS0618: '“WebProxy.GetDefaultProxy()”已过时:“This method has been deprecated. Please use the proxy selected for you by default. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\ProxyHelper.cs(150,33,150,59): warning CS0618: '“WebProxy.GetDefaultProxy()”已过时:“This method has been deprecated. Please use the proxy selected for you by default. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\POSPrinter.cs(58,44,58,89): warning CS0618: '“FileStream.FileStream(IntPtr, FileAccess)”已过时:“This constructor has been deprecated.  Please use new FileStream(SafeFileHandle handle, FileAccess access) instead.  http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\NetworkUtil.cs(798,39,798,66): warning CS0618: '“Dns.GetHostByName(string)”已过时:“GetHostByName is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\NetworkUtil.cs(815,39,815,61): warning CS0618: '“Dns.Resolve(string)”已过时:“Resolve is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\NetworkUtil.cs(853,24,853,43): warning CS0618: '“Dns.Resolve(string)”已过时:“Resolve is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Network\NetworkUtil.cs(890,26,890,43): warning CS0618: '“Dns.Resolve(string)”已过时:“Resolve is obsoleted for this type, please use GetHostEntry instead. http://go.microsoft.com/fwlink/?linkid=14202”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\Util.cs(71,34,71,36): warning CS0168: 声明了变量“ex”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Others\UnicodeHelper.cs(63,40,63,42): warning CS0168: 声明了变量“ex”，但从未使用过
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Format\StringUtil.cs(176,31,176,38): warning CS0219: 变量“meindex”已被赋值，但从未使用过它的值
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Winform\TreeViewDrager.cs(42,23,42,32): warning CS0169: 从不使用字段“TreeViewDrager.nodeImage”
+4>D:\Git\M12MiniMes\WHC.Framework.Commons\Image\ValidateImgHelper.cs(18,21,18,32): warning CS0414: 字段“ValidateImgHelper.letterCount”已被赋值，但从未使用过它的值
+4>  WHC.Framework.Commons -> D:\Faster\App\3rdDlls\WHC.Framework.Commons.dll
+6>------ 已启动全部重新生成: 项目: WHC.Framework.ControlUtil, 配置: Debug Any CPU ------
+5>D:\Git\M12MiniMes\WHC.Pager.WinControlDx\Pager.cs(481,34,481,36): warning CS0168: 声明了变量“ex”，但从未使用过
+5>  WHC.Pager.WinControlDx -> D:\Faster\App\3rdDlls\WHC.Pager.WinControlDx.dll
+6>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2081,5): warning MSB3270: 所生成项目的处理器架构“MSIL”与引用“System.Data.SQLite, Version=1.0.61.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86”的处理器架构“x86”不匹配。这种不匹配可能会导致运行时失败。请考虑通过配置管理器更改您的项目的目标处理器架构，以使您的项目与引用间的处理器架构保持一致，或者为引用关联一个与您的项目的目标处理器架构相符的处理器架构。
+6>D:\Git\M12MiniMes\WHC.Framework.ControlUtil\Framework\BaseDAL\BaseDALSQLite.cs(354,34,354,53): warning CS0114: '“BaseDALSQLite<T>.GetConnectionString(string)”隐藏继承的成员“AbstractBaseDAL<T>.GetConnectionString(string)”。若要使当前成员重写该实现，请添加关键字 override。否则，添加关键字 new。
+6>D:\Git\M12MiniMes\WHC.Framework.ControlUtil\Framework\BaseDAL\BaseDALOracle.cs(265,50,265,66): warning CS0618: '“OracleConnection”已过时:“OracleConnection has been deprecated. http://go.microsoft.com/fwlink/?LinkID=144260”
+6>D:\Git\M12MiniMes\WHC.Framework.ControlUtil\Framework\Facade\SignatureHelper.cs(51,22,51,92): warning CS0618: '“FormsAuthentication.HashPasswordForStoringInConfigFile(string, string)”已过时:“The recommended alternative is to use the Membership APIs, such as Membership.CreateUser. For more information, see http://go.microsoft.com/fwlink/?LinkId=252463.”
+6>D:\Git\M12MiniMes\WHC.Framework.ControlUtil\Framework\Facade\NormalApiService.cs(172,22,172,92): warning CS0618: '“FormsAuthentication.HashPasswordForStoringInConfigFile(string, string)”已过时:“The recommended alternative is to use the Membership APIs, such as Membership.CreateUser. For more information, see http://go.microsoft.com/fwlink/?LinkId=252463.”
+6>D:\Git\M12MiniMes\WHC.Framework.ControlUtil\Framework\Facade\CustomClientChannel.cs(236,46,236,70): warning CS0618: '“NetPeerTcpBindingElement”已过时:“PeerChannel feature is obsolete and will be removed in the future.”
+6>D:\Git\M12MiniMes\WHC.Framework.ControlUtil\Framework\Facade\CustomClientChannel.cs(237,28,237,45): warning CS0618: '“NetPeerTcpBinding”已过时:“PeerChannel feature is obsolete and will be removed in the future.”
+6>  WHC.Framework.ControlUtil -> D:\Faster\App\3rdDlls\WHC.Framework.ControlUtil.dll
+7>------ 已启动全部重新生成: 项目: WHC.Framework.BaseUIDx, 配置: Debug Any CPU ------
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\LocalReport\ProcessingThread.cs(96,28,96,47): warning CS0618: '“SecurityTreatAsSafeAttribute”已过时:“SecurityTreatAsSafe is only used for .NET 2.0 transparency compatibility.  Please use the SecuritySafeCriticalAttribute instead.”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\BaseUI\FrmSplashScreen.cs(20,22,20,33): warning CS0108: '“FrmSplashScreen.SplashImage”隐藏继承的成员“SplashScreen.SplashImage”。如果是有意隐藏，请使用关键字 new。
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozItem.cs(1309,24,1309,46): warning CS0672: 成员“MozItemDesigner.OnSetComponentDefaults()”将重写过时的成员“ComponentDesigner.OnSetComponentDefaults()”。请向“MozItemDesigner.OnSetComponentDefaults()”中添加 Obsolete 特性。
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(2121,24,2121,46): warning CS0672: 成员“MozPaneDesigner.OnSetComponentDefaults()”将重写过时的成员“ComponentDesigner.OnSetComponentDefaults()”。请向“MozPaneDesigner.OnSetComponentDefaults()”中添加 Obsolete 特性。
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\ScrollableControlWithScrollEvents.cs(69,38,69,54): warning CS0108: '“ScrollableControlWithScrollEvents.HorizontalScroll”隐藏继承的成员“ScrollableControl.HorizontalScroll”。如果是有意隐藏，请使用关键字 new。
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\ScrollableControlWithScrollEvents.cs(76,38,76,52): warning CS0108: '“ScrollableControlWithScrollEvents.VerticalScroll”隐藏继承的成员“ScrollableControl.VerticalScroll”。如果是有意隐藏，请使用关键字 new。
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozItem.cs(394,25,394,34): warning CS0809: 过时成员“MozItem.BackColor”重写未过时成员“Control.BackColor”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozItem.cs(409,25,409,34): warning CS0809: 过时成员“MozItem.ForeColor”重写未过时成员“Control.ForeColor”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozItem.cs(426,25,426,40): warning CS0809: 过时成员“MozItem.BackgroundImage”重写未过时成员“Control.BackgroundImage”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozItem.cs(441,31,441,42): warning CS0809: 过时成员“MozItem.RightToLeft”重写未过时成员“Control.RightToLeft”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(126,29,126,43): warning CS0108: '“MozPane.PaddingChanged”隐藏继承的成员“Control.PaddingChanged”。如果是有意隐藏，请使用关键字 new。
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(430,28,430,35): warning CS0108: '“MozPane.Padding”隐藏继承的成员“Control.Padding”。如果是有意隐藏，请使用关键字 new。
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(582,25,582,40): warning CS0809: 过时成员“MozPane.BackgroundImage”重写未过时成员“Control.BackgroundImage”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(598,31,598,42): warning CS0809: 过时成员“MozPane.RightToLeft”重写未过时成员“Control.RightToLeft”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(613,26,613,30): warning CS0809: 过时成员“MozPane.Text”重写未过时成员“Control.Text”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(628,25,628,34): warning CS0809: 过时成员“MozPane.ForeColor”重写未过时成员“Control.ForeColor”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(643,24,643,34): warning CS0809: 过时成员“MozPane.AutoScroll”重写未过时成员“ScrollableControl.AutoScroll”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozPane.cs(2123,4,2123,33): warning CS0618: '“ComponentDesigner.OnSetComponentDefaults()”已过时:“This method has been deprecated. Use InitializeNewComponent instead.  http://go.microsoft.com/fwlink/?linkid=14202”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Control\CustomGridControl.cs(34,30,34,69): warning CS0618: '“LikeData.CreateContainsPattern(string)”已过时:“Use FunctionOperatorType.Contains instead”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Control\CustomGridControl.cs(39,85,39,108): warning CS0618: '“BinaryOperatorType.Like”已过时:“Use StartsWith, EndsWith, Contains functions or Like custom function instead. See https://www.devexpress.com/Support/Center/Question/Details/T313960 for details.”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Settings\MozBar\MozItem.cs(1311,4,1311,33): warning CS0618: '“ComponentDesigner.OnSetComponentDefaults()”已过时:“This method has been deprecated. Use InitializeNewComponent instead.  http://go.microsoft.com/fwlink/?linkid=14202”
+7>D:\Git\M12MiniMes\WHC.Framework.BaseUIDx\Device\Camera.cs(53,50,53,65): warning CS0067: 从不使用事件“Camera.CameraConnected”
+7>  WHC.Framework.BaseUIDx -> D:\Faster\App\3rdDlls\WHC.Framework.BaseUIDx.dll
+8>------ 已启动全部重新生成: 项目: M12MiniMes.UIDx, 配置: Debug Any CPU ------
+8>  无法解决“Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da”与“Autofac, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da”之间的冲突。正在随意选择“Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da”。
+8>  请考虑使用 app.config 将程序集“Autofac, Culture=neutral, PublicKeyToken=17863af14b0044da”从版本“3.3.0.0”[]重新映射到版本“3.5.0.0”[D:\Faster\App\3rdDlls\Autofac.dll]，以解决冲突并消除警告。
+8>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2081,5): warning MSB3276: 发现同一依赖程序集的不同版本间存在冲突。请将项目文件中的“AutoGenerateBindingRedirects”属性设置为 true。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=294190。
+8>D:\Git\M12MiniMes\M12MiniMes.UIDx\UI\Frm设备表.cs(534,18,534,27): warning CS0219: 变量“converted”已被赋值，但从未使用过它的值
+8>D:\Git\M12MiniMes\M12MiniMes.UIDx\UI\Frm设备表.cs(536,22,536,24): warning CS0168: 声明了变量“dt”，但从未使用过
+8>  M12MiniMes.UIDx -> D:\Faster\App\3rdDlls\M12MiniMes.UIDx.exe
+9>------ 已启动全部重新生成: 项目: M12MiniMes.UIStart, 配置: Debug Any CPU ------
+9>  无法解决“log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a”与“log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a”之间的冲突。正在随意选择“log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a”。
+9>  无法解决“Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da”与“Autofac, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da”之间的冲突。正在随意选择“Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da”。
+9>  请考虑使用 app.config 将程序集“log4net, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a”从版本“1.2.15.0”[D:\Faster\App\3rdDlls\log4net.dll]重新映射到版本“2.0.8.0”[D:\Faster\log4net.dll]，以解决冲突并消除警告。
+9>  请考虑使用 app.config 将程序集“Autofac, Culture=neutral, PublicKeyToken=17863af14b0044da”从版本“3.3.0.0”[]重新映射到版本“3.5.0.0”[D:\Faster\App\3rdDlls\Autofac.dll]，以解决冲突并消除警告。
+9>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2081,5): warning MSB3276: 发现同一依赖程序集的不同版本间存在冲突。请将项目文件中的“AutoGenerateBindingRedirects”属性设置为 true。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=294190。
+9>D:\Git\M12MiniMes\M12MiniMes.UIStart\ItemManager.cs(44,10,44,15): warning CS0657: '“field”不是此声明的有效特性位置。此声明的有效特性位置是“property”。此块中的所有特性都将被忽略。
+9>D:\Git\M12MiniMes\M12MiniMes.UIStart\ItemManager.cs(64,10,64,15): warning CS0657: '“field”不是此声明的有效特性位置。此声明的有效特性位置是“property”。此块中的所有特性都将被忽略。
+9>D:\Git\M12MiniMes\M12MiniMes.UIStart\TcpServer.cs(96,24,96,39): warning CS0219: 变量“strCMachineName”已被赋值，但从未使用过它的值
+9>D:\Git\M12MiniMes\M12MiniMes.UIStart\TcpServer.cs(97,29,97,41): warning CS0219: 变量“CMachineItem”已被赋值，但从未使用过它的值
+9>  M12MiniMes.UIStart -> D:\Faster\App\UserForms\M12MiniMes.UIStart.exe
+========== 全部重新生成: 成功 9 个，失败 0 个，跳过 0 个 ==========

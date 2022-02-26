@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WHC.Framework.Language</name>
+    </assembly>
+    <members>
+        <member name="T:WHC.Framework.Language.JsonLanguage">
+            <summary>
+            基于JSON的多语言处理类
+            </summary>
+        </member>
+        <member name="F:WHC.Framework.Language.JsonLanguage.resources">
+            <summary>
+            存储数据
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.Language.JsonLanguage.#ctor">
+            <summary>
+            私有函数
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.Language.JsonLanguage.LoadLanguage(System.String)">
+            <summary>
+            根据语言初始化信息。
+            加载对应语言的JSON信息，把翻译信息存储在全属性resources里面。
+            </summary>
+            <param name="language">默认的语言类型，如zh-Hans，en-US等</param>
+        </member>
+        <member name="M:WHC.Framework.Language.JsonLanguage.LoadFile(System.String)">
+            <summary>
+            加载单一的文件
+            </summary>
+            <param name="file">JSON格式文件</param>
+        </member>
+        <member name="M:WHC.Framework.Language.JsonLanguage.Translate(System.Boolean,System.String)">
+            <summary>
+            为了减少翻译工作的繁琐，我们可以先保留翻译文本的空值，使用百度API进行翻译后，序列号内容到JSON文件。
+            然后我们在开发过程中的时候调整翻译文本内容即可（本接口目的是为了开发翻译内容方便）。
+            </summary>
+            <param name="sorted">是否对字典进行排序</param>
+            <param name="language">当前的语言缩写词</param>
+        </member>
+        <member name="M:WHC.Framework.Language.JsonLanguage.TranslateFile(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            对单一的文件中的空白翻译内容，使用接口进行翻译
+            </summary>
+            <param name="file">JSON格式文件</param>
+        </member>
+        <member name="M:WHC.Framework.Language.JsonLanguage.GetString(System.String)">
+            <summary>
+            根据对应的键值获取对应的语言参考
+            </summary>
+            <param name="key">传递过来的键值参考，如：姓名</param>
+            <returns></returns>
+        </member>
+        <member name="P:WHC.Framework.Language.JsonLanguage.Default">
+            <summary>
+            单例
+            </summary>
+        </member>
+        <member name="P:WHC.Framework.Language.JsonLanguage.HasResource">
+            <summary>
+            用于判断有对应语言的资源文件
+            </summary>
+        </member>
+        <member name="T:WHC.Framework.Language.TranslationHelper">
+            <summary>
+            翻译相应的词汇
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.Language.TranslationHelper.Translate(System.String,System.String,System.String)">
+            <summary>
+            接口翻译
+            </summary>
+            <param name="inputString">输入字符串</param>
+            <param name="from">源内容语言</param>
+            <param name="to">目标语言</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Framework.Language.TranslationHelper.BaiduTranslate(System.String,System.String,System.String)">
+            <summary>
+            百度接口翻译
+            </summary>
+            <param name="inputString">输入字符串</param>
+            <param name="from">源内容语言</param>
+            <param name="to">目标语言</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Framework.Language.StringUtil">
+            <summary>
+            提供对字符串的一些特殊处理
+            </summary>
+        </member>
+        <member name="M:WHC.Framework.Language.StringUtil.ToProperCase(System.String)">
+            <summary>
+            将字符串转换为合适的大小写
+            </summary>
+            <param name="s">操作的字符串</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WHC.Pager.WinControlEx</name>
+    </assembly>
+    <members>
+        <member name="T:WHC.Pager.WinControl.ZoomMode">
+            <summary>
+            Specifies the zoom mode for the <see cref="T:WHC.Pager.WinControl.CoolPrintPreviewControl"/> control.
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.ZoomMode.ActualSize">
+            <summary>
+            Show the preview in actual size.
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.ZoomMode.FullPage">
+            <summary>
+            Show a full page.
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.ZoomMode.PageWidth">
+            <summary>
+            Show a full page width.
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.ZoomMode.TwoPages">
+            <summary>
+            Show two full pages.
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.ZoomMode.Custom">
+            <summary>
+            Use the zoom factor specified by the <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.Zoom"/> property.
+            </summary>
+        </member>
+        <member name="T:WHC.Pager.WinControl.CoolPrintPreviewControl">
+            <summary>
+            Represents a preview of one or two pages in a <see cref="T:System.Drawing.Printing.PrintDocument"/>.
+            </summary>
+            <remarks>
+            This control is similar to the standard <see cref="T:System.Windows.Forms.PrintPreviewControl"/> but
+            it displays pages as they are rendered. By contrast, the standard control 
+            waits until the entire document is rendered before it displays anything.
+            </remarks>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewControl.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:WHC.Pager.WinControl.CoolPrintPreviewControl"/> control.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewControl.RefreshPreview">
+            <summary>
+            Regenerates the preview to reflect changes in the document layout.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewControl.Cancel">
+            <summary>
+            Stops rendering the <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.Document"/>.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewControl.Print">
+            <summary>
+            Prints the current document honoring the selected page range.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewControl.OnStartPageChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:WHC.Pager.WinControl.CoolPrintPreviewControl.StartPageChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that provides the event data.</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewControl.OnPageCountChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:WHC.Pager.WinControl.CoolPrintPreviewControl.PageCountChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that provides the event data/</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewControl.OnZoomModeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:WHC.Pager.WinControl.CoolPrintPreviewControl.ZoomModeChanged"/> event.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.Document">
+            <summary>
+            Gets or sets the <see cref="T:System.Drawing.Printing.PrintDocument"/> being previewed.
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.IsRendering">
+            <summary>
+            Gets a value that indicates whether the <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.Document"/> is being rendered.
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.ZoomMode">
+            <summary>
+            Gets or sets how the zoom should be adjusted when the control is resized.
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.Zoom">
+            <summary>
+            Gets or sets a custom zoom factor used when the <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.ZoomMode"/> property
+            is set to <b>Custom</b>.
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.StartPage">
+            <summary>
+            Gets or sets the first page being previewed.
+            </summary>
+            <remarks>
+            There may be one or two pages visible depending on the setting of the
+            <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.ZoomMode"/> property.
+            </remarks>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.PageCount">
+            <summary>
+            Gets the number of pages available for preview.
+            </summary>
+            <remarks>
+            This number increases as the document is rendered into the control.
+            </remarks>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.BackColor">
+            <summary>
+            Gets or sets the control's background color.
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewControl.PageImages">
+            <summary>
+            Gets a list containing the images of the pages in the document.
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.CoolPrintPreviewControl.StartPageChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.StartPage"/> property changes.
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.CoolPrintPreviewControl.PageCountChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.PageCount"/> property changes.
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.CoolPrintPreviewControl.ZoomModeChanged">
+            <summary>
+            Occurs when the value of the <see cref="P:WHC.Pager.WinControl.CoolPrintPreviewControl.ZoomMode"/> property changes.
+            </summary>
+        </member>
+        <member name="T:WHC.Pager.WinControl.Pager">
+            <summary>
+            分页工具条用户控件，仅提供分页信息显示及改变页码操作
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.Pager.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.#ctor">
+            <summary> 
+            默认构造函数，设置分页初始信息
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.#ctor(System.Int32,System.Int32)">
+            <summary> 
+            带参数的构造函数
+            <param name="pageSize">每页记录数</param>
+            <param name="recordCount">总记录数</param>
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要使用代码编辑器 
+            修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.OnPageChanged(System.EventArgs)">
+            <summary>
+            页面变化处理
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.InitPageInfo(WHC.Pager.Entity.PagerInfo)">
+            <summary>
+            初始化分页信息
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.InitPageInfo(System.Int32,System.Int32)">
+            <summary> 
+            初始化分页信息
+            <param name="pageSize">每页记录数</param>
+            <param name="recordCount">总记录数</param>
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.InitPageInfo(System.Int32)">
+            <summary> 
+            初始化分页信息
+            <param name="recordCount">总记录数</param>
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.InitPageInfo">
+            <summary> 
+            初始化分页信息
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Pager.RefreshData(System.Int32)">
+            <summary>
+            刷新页面数据
+            </summary>
+            <param name="page">页码</param>
+        </member>
+        <member name="E:WHC.Pager.WinControl.Pager.PageChanged">
+            <summary>
+            页面切换的时候触发的时间
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Pager.PagerInfo">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Pager.ShowExportButton">
+            <summary>
+            是否显示导出按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Pager.PageSize">
+            <summary>
+            设置或获取一页中显示的记录数目
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Pager.PageCount">
+            <summary>
+            获取记录总页数
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Pager.RecordCount">
+            <summary>
+            设置或获取记录总数
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Pager.CurrentPageIndex">
+            <summary>
+            当前的页面索引, 开始为1
+            </summary>
+        </member>
+        <member name="T:WHC.Pager.WinControl.WinGridView">
+            <summary>
+            不带分页导航的列表展示控件
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.AddMenuText">
+            <summary>
+            新建菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.EditMenuText">
+            <summary>
+            编辑菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.DeleteMenuText">
+            <summary>
+            删除菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.RefreshMenuText">
+            <summary>
+            刷新菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.AllToExport">
+            <summary>
+            导出全部的数据源
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.ShowLineNumber">
+            <summary>
+            是否显示行号
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridView.EventRowBackColor">
+            <summary>
+            获取或设置奇数行的背景色
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.GetDisplayColumnIndex(System.String)">
+            <summary>
+            返回对应字段的显示顺序，如果没有，返回-1
+            </summary>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.StartExport(System.String)">
+            <summary>
+            starts the export to new excel document
+            </summary>
+            <param name="filepath">the file to export to</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.bg_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+            使用背景线程导出Excel文档
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.GetCheckedRows">
+            <summary>
+            获取勾选上的行索引列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridView.AddColumnAlias(System.String,System.String)">
+            <summary>
+            添加列名的别名
+            </summary>
+            <param name="key">列的原始名称</param>
+            <param name="alias">列的别名</param>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.ShowCheckBox">
+            <summary>
+            是否显示CheckBox列
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.ShowExportButton">
+            <summary>
+            设置是否显示导出菜单
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.ShowAddMenu">
+            <summary>
+            是否显示新建菜单
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.ShowEditMenu">
+            <summary>
+            是否显示编辑菜单
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.ShowDeleteMenu">
+            <summary>
+            是否显示删除菜单
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.ColumnNameAlias">
+            <summary>
+            列名的别名字典集合
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnStartExport">
+            <summary>
+            导出Excel前执行的操作
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnEndExport">
+            <summary>
+            导出Excel后执行的操作
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnEditSelected">
+            <summary>
+            双击控件实现的操作，实现后出现右键菜单“编辑选定项”
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnDeleteSelected">
+            <summary>
+            实现事件后出现“删除选定项”菜单项
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnRefresh">
+            <summary>
+            实现事件后出现“更新”菜单项
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnAddNew">
+            <summary>
+            实现事件后，出现“新建”菜单项
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnGridViewMouseClick">
+            <summary>
+            实现对单击GirdView控件的响应
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridView.OnGridViewMouseDoubleClick">
+            <summary>
+            实现对双击GirdView控件的响应
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.AppendedMenu">
+            <summary>
+            追加的菜单项目
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.DataSource">
+            <summary>
+            获取或设置的数据源
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.DisplayColumns">
+            <summary>
+            显示的列内容，需要指定以防止GridView乱序
+            使用"|"或者","分开每个列，如“ID|Name”
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridView.PrintTitle">
+            <summary>
+            打印报表的抬头（标题）
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinListViewPager.StartExport(System.String)">
+            <summary>
+            starts the export to new excel document
+            </summary>
+            <param name="filepath">the file to export to</param>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinListViewPager.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinListViewPager.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinListViewPager.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.GetMD5_32(System.String)">
+            <summary>
+            获得32位的MD5加密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.GetMD5_16(System.String)">
+            <summary>
+            获得16位的MD5加密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.GetMD5_8(System.String)">
+            <summary>
+            获得8位的MD5加密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.GetMD5_4(System.String)">
+            <summary>
+            获得4位的MD5加密
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.AddMD5Profix(System.String)">
+            <summary>
+            添加MD5的前缀，便于检查有无篡改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.RemoveMD5Profix(System.String)">
+            <summary>
+            移除MD5的前缀
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.ValidateValue(System.String)">
+            <summary>
+            验证MD5前缀处理的字符串有无被篡改
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.AddMD5(System.String)">
+            <summary>
+            对给定文件路径的文件加上标签
+            </summary>
+            <param name="path">要加密的文件的路径</param>
+            <returns>标签的值</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.CheckMD5(System.String)">
+            <summary>
+            对给定路径的文件进行验证
+            </summary>
+            <param name="path"></param>
+            <returns>是否加了标签或是否标签值与内容值一致</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.MD5Util.MD5Buffer(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            计算文件的MD5值
+            </summary>
+            <param name="MD5File">MD5签名文件字符数组</param>
+            <param name="index">计算起始位置</param>
+            <param name="count">计算终止位置</param>
+            <returns>计算结果</returns>
+        </member>
+        <member name="T:WHC.Pager.WinControl.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.PrintOptions.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PrintOptions.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PrintOptions.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PrintOptions.SetCheckedItems(System.String[])">
+            <summary>
+            设置选定项目
+            </summary>
+            <param name="items"></param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PrintOptions.GetCheckItems">
+            <summary>
+            获取用户选定的项目内容
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.DataTableInsertToExcel(System.Data.DataTable,System.Collections.ArrayList,System.String,System.String@,System.Int32,System.Int32)">
+            <summary>
+            DataTabel转换成Excel文件
+            </summary>
+            <param name="datatable">DataTable对象</param>
+            <param name="colNameList">返回的字段列表</param>
+            <param name="fromfile">Excel文件的全路径</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <param name="beginColumn">开始列的序号</param>
+            <param name="beginRow">开始的行序号</param>
+            <returns>true:函数正确执行 false:函数执行错误</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.DataTableToExcel(System.Data.DataTable,System.String,System.String@)">
+            <summary>
+            把DataTabel转换成Excel文件
+            </summary>
+            <param name="datatable">DataTable对象</param>
+            <param name="filepath">目标文件路径,Excel文件的全路径</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.DataTableToExcel2(System.Data.DataTable,System.String,System.String@)">
+            <summary>
+            把DataTabel转换成Excel文件
+            </summary>
+            <param name="datatable">DataTable对象</param>
+            <param name="filepath">目标文件路径,Excel文件的全路径</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.DataSetToExcel(System.Data.DataSet,System.String,System.String@)">
+            <summary>
+            DataSet导出到Excel文件
+            默认导出第一页的数据
+            </summary>
+            <param name="dataset">DataSet</param>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns>true:函数正确执行 false:函数执行错误</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ExcelFileToDataTable(System.String,System.Data.DataTable@,System.String@)">
+            <summary>
+            Excel文件转换为DataTable（第一个sheet）
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="datatable">DataTable:返回值</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns>true:函数正确执行 false:函数执行错误</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ExcelFileToDataTable(System.String,System.Data.DataTable@,System.Boolean,System.String@)">
+            <summary>
+            Excel文件转换为DataTable.
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="datatable">DataTable:返回值</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns>true:函数正确执行 false:函数执行错误</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ExcelFileToDataTables(System.String,System.Data.DataTable[]@,System.String@)">
+            <summary>
+            把所有Sheet里面的内容，分别导入到不同的DataTable对象里面
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="datatables">DataTable对象集合</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ExcelFileToDataTables(System.String,System.Data.DataTable[]@,System.Boolean,System.String@)">
+            <summary>
+            把所有Sheet里面的内容，分别导入到不同的DataTable对象里面
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="datatables">DataTable对象集合</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ExcelFileToDataTable(System.String,System.Data.DataTable@,System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.String@)">
+            <summary>
+            Excel文件转换为DataTable.(指定开始行列，以及导入的记录行数）
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="datatable">DataTable:返回值</param>
+            <param name="iFirstRow">起始行</param>
+            <param name="iFirstCol">起始列</param>
+            <param name="rowNum">导入行数</param>
+            <param name="colNum">列数</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ExcelFileToDataSet(System.String,System.Data.DataSet@,System.String@)">
+            <summary>
+            Excel文件转换为DataSet.
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="dataset">DataSet:返回值</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns>true:函数正确执行 false:函数执行错误</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.GetPicturesFromExcelFile(System.String,Aspose.Cells.Drawing.PictureCollection[]@,System.String@)">
+            <summary>
+            获取Excel文件里面的图片，并把图片存储到图片对象列表中
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="pictures">图片对象列表</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ExcelFileToLists(System.String,System.Collections.IList[]@,System.String@)">
+            <summary>
+            把Excel文件内容导入到List对象
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="lists">列表对象</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AsposeExcelTools.ListsToExcelFile(System.String,System.Collections.IList[],System.String@)">
+            <summary>
+            把列表导出到Excle文件
+            </summary>
+            <param name="filepath">Excel文件的全路径</param>
+            <param name="lists">列表对象</param>
+            <param name="error">错误信息:返回错误信息，没有错误返回""</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.DesEncrypt(System.String)">
+            <summary>
+            使用默认加密
+            </summary>
+            <param name="strText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.DesDecrypt(System.String)">
+            <summary>
+            使用默认解密
+            </summary>
+            <param name="strText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.DesEncrypt(System.String,System.String)">
+            <summary> 
+            Encrypt the string 
+            Attention:key must be 8 bits 
+            </summary> 
+            <param name="strText">string</param> 
+            <param name="strEncrKey">key</param> 
+            <returns></returns> 
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.DesDecrypt(System.String,System.String)">
+            <summary> 
+            Decrypt string 
+            Attention:key must be 8 bits 
+            </summary> 
+            <param name="strText">Decrypt string</param> 
+            <param name="sDecrKey">key</param> 
+            <returns>output string</returns> 
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.DesEncrypt(System.String,System.String,System.String)">
+            <summary> 
+            Encrypt files 
+            Attention:key must be 8 bits 
+            </summary> 
+            <param name="m_InFilePath">Encrypt file path</param> 
+            <param name="m_OutFilePath">output file</param> 
+            <param name="strEncrKey">key</param> 
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.DesDecrypt(System.String,System.String,System.String)">
+            <summary> 
+            Decrypt files 
+            Attention:key must be 8 bits 
+            </summary> 
+            <param name="m_InFilePath">Decrypt filepath</param> 
+            <param name="m_OutFilePath">output filepath</param> 
+            <param name="sDecrKey">key</param> 
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_Encrypt(System.String)">
+            <summary>
+            对称加密算法AES RijndaelManaged加密(RijndaelManaged（AES）算法是块式加密算法)
+            </summary>
+            <param name="encryptString">待加密字符串</param>
+            <returns>加密结果字符串</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_Encrypt(System.String,System.String)">
+            <summary>
+            对称加密算法AES RijndaelManaged加密(RijndaelManaged（AES）算法是块式加密算法)
+            </summary>
+            <param name="encryptString">待加密字符串</param>
+            <param name="encryptKey">加密密钥，须半角字符</param>
+            <returns>加密结果字符串</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_Decrypt(System.String)">
+            <summary>
+            对称加密算法AES RijndaelManaged解密字符串
+            </summary>
+            <param name="decryptString">待解密的字符串</param>
+            <returns>解密成功返回解密后的字符串,失败返源串</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_Decrypt(System.String,System.String)">
+            <summary>
+            对称加密算法AES RijndaelManaged解密字符串
+            </summary>
+            <param name="decryptString">待解密的字符串</param>
+            <param name="decryptKey">解密密钥,和加密密钥相同</param>
+            <returns>解密成功返回解密后的字符串,失败返回空</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.GetSubString(System.String,System.Int32,System.String)">
+            <summary>
+            按字节长度(按字节,一个汉字为2个字节)取得某字符串的一部分
+            </summary>
+            <param name="sourceString">源字符串</param>
+            <param name="length">所取字符串字节长度</param>
+            <param name="tailString">附加字符串(当字符串不够长时，尾部所添加的字符串，一般为"...")</param>
+            <returns>某字符串的一部分</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.GetSubString(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            按字节长度(按字节,一个汉字为2个字节)取得某字符串的一部分
+            </summary>
+            <param name="sourceString">源字符串</param>
+            <param name="startIndex">索引位置，以0开始</param>
+            <param name="length">所取字符串字节长度</param>
+            <param name="tailString">附加字符串(当字符串不够长时，尾部所添加的字符串，一般为"...")</param>
+            <returns>某字符串的一部分</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_EncryptStrream(System.IO.FileStream,System.String)">
+            <summary>
+            加密文件流
+            </summary>
+            <param name="fs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_DecryptStream(System.IO.FileStream,System.String)">
+            <summary>
+            解密文件流
+            </summary>
+            <param name="fs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_EncryptFile(System.String,System.String)">
+            <summary>
+            对指定文件加密
+            </summary>
+            <param name="InputFile"></param>
+            <param name="OutputFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.AES_DecryptFile(System.String,System.String)">
+            <summary>
+            对指定的文件解压缩
+            </summary>
+            <param name="InputFile"></param>
+            <param name="OutputFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.Base64Encrypt(System.String)">
+            <summary>
+            Base64是一種使用64基的位置計數法。它使用2的最大次方來代表僅可列印的ASCII 字元。
+            這使它可用來作為電子郵件的傳輸編碼。在Base64中的變數使用字元A-Z、a-z和0-9 ，
+            這樣共有62個字元，用來作為開始的64個數字，最後兩個用來作為數字的符號在不同的
+            系統中而不同。
+            Base64加密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.Base64Decrypt(System.String)">
+            <summary>
+            Base64解密
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.MD5Encrypt(System.String)">
+            <summary> 
+            MD5 Encrypt 
+            </summary> 
+            <param name="strText">text</param> 
+            <returns>md5 Encrypt string</returns> 
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.EncyptMD5_3_16(System.String)">
+            <summary>
+            MD5 三次加密算法.计算过程: (QQ使用)
+            1. 验证码转为大写
+            2. 将密码使用这个方法进行三次加密后,与验证码进行叠加
+            3. 然后将叠加后的内容再次MD5一下,得到最终验证码的值
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.SHA256(System.String)">
+            <summary>
+            SHA256函数
+            </summary>
+            <param name="str">原始字符串</param>
+            <returns>SHA256结果(返回长度为44字节的字符串)</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.EncryptString(System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.EncodeHelper.DecryptString(System.String,System.Boolean)">
+            <summary>
+            解密加过密的字符串
+            </summary>
+            <param name="input"></param>
+            <param name="throwException">解密失败是否抛异常</param>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Pager.WinControl.AppConfig">
+            <summary>
+            用于获取或设置Web.config/*.exe.config中节点数据的辅助类
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AppConfig.#ctor">
+            <summary>
+            从当前目录中按顺序检索Web.Config和*.App.Config文件。
+            如果找到一个，则使用它作为配置文件；否则会抛出一个ArgumentNullException异常。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AppConfig.#ctor(System.String)">
+            <summary>
+            用户指定具体的配置文件路径
+            </summary>
+            <param name="configFilePath">配置文件路径（绝对路径）</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AppConfig.AppConfigSet(System.String,System.String)">
+            <summary>
+            设置程序的config文件
+            </summary>
+            <param name="keyName">键名</param>
+            <param name="keyValue">键值</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AppConfig.AppConfigGet(System.String)">
+            <summary>
+            读取程序的config文件的键值。
+            如果键名不存在，返回空
+            </summary>
+            <param name="keyName">键名</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AppConfig.GetSubValue(System.String,System.String)">
+            <summary>
+            获取指定键名中的子项的值
+            </summary>
+            <param name="keyName">键名</param>
+            <param name="subKeyName">以分号(;)为分隔符的子项名称</param>
+            <returns>对应子项名称的值（即是=号后面的值）</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AppConfig.SetConnectionString(System.String,System.String)">
+            <summary>
+            设置程序的config文件的Enterprise Library的数据库链接地址
+            </summary>
+            <param name="filePath">Web.config或者*.exe.config文件的绝对路径</param>
+            <param name="keyName">键名</param>
+            <param name="keyValue">键值</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.AppConfig.GetConnectionString(System.String)">
+            <summary>
+            读取程序的config文件Enterprise Library的数据库链接地址
+            </summary>
+            <param name="filePath">Web.config或者*.exe.config文件的绝对路径</param>
+            <param name="keyName">键名</param>
+            <returns></returns>
+        </member>
+        <member name="P:WHC.Pager.WinControl.AppConfig.HWSecurity">
+            <summary>
+            从配置文件获取权限系统链接（配置项HWSecurity的值）
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.AppConfig.System_ID">
+            <summary>
+            系统的标识ID（配置项System_ID的值）
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.AppConfig.AppName">
+            <summary>
+            应用程序名称（配置项ApplicationName的值）
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.AppConfig.Manufacturer">
+            <summary>
+            软件厂商名称（配置项Manufacturer的值）
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.RegistryHelper.GetValue(System.String)">
+            <summary>
+            Gets the value by registry key. If the key does not exist, return empty string.
+            </summary>
+            <param name="key">registry key</param>
+            <returns>Returns the value of the specified key.</returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.RegistryHelper.SaveValue(System.String,System.String)">
+            <summary>
+            Saves the key and the value to registry.
+            </summary>
+            <param name="key">registry key</param>
+            <param name="value">the value of the key</param>
+            <returns>Returns true if successful, otherwise return false.</returns>
+        </member>
+        <member name="P:WHC.Pager.WinControl.MyConstants.ConfigFile">
+            <summary>
+            默认的配置文件路径
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.MyConstants.License">
+            <summary>
+            授权用户的授权码
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.LicenseCheckResult.IsValided">
+            <summary>
+            是否验证通过
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.LicenseCheckResult.Username">
+            <summary>
+            注册的用户名称
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.LicenseCheckResult.CompanyName">
+            <summary>
+            注册的公司名称
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.LicenseCheckResult.DisplayCopyright">
+            <summary>
+            是否显示授权信息
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.LicenseTool.CheckLicense">
+            <summary>
+            检查用户的授权码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:WHC.Pager.WinControl.Base64Util">
+            <summary>
+            基于Base64的加密编码，
+            可以设置不同的密码表来获取不同的编码合解码
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.Encrypt(System.String)">
+            <summary>
+            使用默认的密码表加密字符串
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.Decrypt(System.String)">
+            <summary>
+            使用默认的密码表解密字符串
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.GetStandardBase64">
+            <summary>
+            获取具有标准的Base64密码表的加密类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.Encode(System.String)">
+            <summary>
+            返回编码后的字符串
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.Decode(System.String)">
+            <summary>
+            获得解码字符串
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.InitDict">
+            <summary>
+            初始化双向哈西字典
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.ValidateRepeat(System.String)">
+            <summary>
+            检查字符串中的字符是否有重复
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.Base64Util.ValidateEqualPad(System.String,System.String)">
+            <summary>
+            检查字符串是否包含补码字符
+            </summary>
+            <param name="input"></param>
+            <param name="pad"></param>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Base64Util.CodeTable">
+            <summary>
+            密码表
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.Base64Util.Pad">
+            <summary>
+            补码
+            </summary>
+        </member>
+        <member name="T:WHC.Pager.WinControl.PagerHelper">
+            <summary> 
+            根据各种不同数据库生成不同分页语句的辅助类 PagerHelper
+            </summary> 
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.#ctor">
+            <summary>
+            默认构造函数，其他通过属性设置
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.#ctor(System.String,System.String,System.String,System.Int32,System.Int32,System.Boolean,System.String)">
+            <summary>
+            完整的构造函数,可以包含条件,返回记录字段等条件
+            </summary>
+            <param name="tableName">自定义查询语句</param>
+            <param name="fieldsToReturn">需要返回的列</param>
+            <param name="fieldNameToSort">排序字段名称</param>
+            <param name="pageSize">页尺寸</param>
+            <param name="pageIndex">当前的页码</param>
+            <param name="isDescending">是否以降序排列</param>
+            <param name="strwhere">检索条件</param>
+            <param name="connectionString">连接字符串</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.GetOracleSql(System.Boolean)">
+            <summary>
+            不依赖于存储过程的分页(Oracle)
+            </summary>
+            <param name="isDoCount">如果isDoCount为True，返回总数统计Sql；否则返回分页语句Sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.GetSqlServerSql(System.Boolean)">
+            <summary>
+            不依赖于存储过程的分页(SqlServer)
+            </summary>
+            <param name="isDoCount">如果isDoCount为True，返回总数统计Sql；否则返回分页语句Sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.GetAccessSql(System.Boolean)">
+            <summary>
+            不依赖于存储过程的分页(Access)
+            </summary>
+            <param name="isDoCount">如果isDoCount为True，返回总数统计Sql；否则返回分页语句Sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.GetMySqlSql(System.Boolean)">
+            <summary>
+            不依赖于存储过程的分页(MySql)
+            </summary>
+            <param name="isDoCount">如果isDoCount为True，返回总数统计Sql；否则返回分页语句Sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.GetSQLiteSql(System.Boolean)">
+            <summary>
+            不依赖于存储过程的分页(SQLite)
+            </summary>
+            <param name="isDoCount">如果isDoCount为True，返回总数统计Sql；否则返回分页语句Sql</param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.GetPagingSql(WHC.Pager.WinControl.DatabaseType,System.Boolean)">
+            <summary>
+            获取对应数据库的分页语句（指定数据库类型）
+            </summary>
+            <param name="dbType">数据库类型枚举</param>
+            <param name="isDoCount">如果isDoCount为True，返回总数统计Sql；否则返回分页语句Sql</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.PagerHelper.GetPagingSql(System.Boolean)">
+            <summary>
+            获取对应数据库的分页语句(从配置文件读取数据库类型：ComponentDbType）
+            </summary>
+            <param name="dbType">数据库类型枚举</param>
+            <param name="isDoCount">如果isDoCount为True，返回总数统计Sql；否则返回分页语句Sql</param>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.TableName">
+            <summary>
+            待查询表或自定义查询语句
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.FieldsToReturn">
+            <summary>
+            需要返回的列
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.FieldNameToSort">
+            <summary>
+            排序字段名称
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.PageSize">
+            <summary>
+            页尺寸,就是一页显示多少条记录
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.PageIndex">
+            <summary>
+            当前的页码
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.IsDescending">
+            <summary>
+            是否以降序排列结果
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.StrWhere">
+            <summary>
+            检索条件(注意: 不要加 where)
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.PagerHelper.TableOrSqlWrapper">
+            <summary>
+            表或Sql语句包装属性
+            </summary>
+        </member>
+        <member name="T:WHC.Pager.WinControl.DatabaseType">
+            <summary>
+            数据库类型
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.FrmSelectColumnDisplay.GetRightColumnName(System.String)">
+            <summary>
+            获取真正的列名称
+            </summary>
+            <param name="columnName">可能大小写不一样的列名</param>
+            <returns></returns>
+        </member>
+        <member name="F:WHC.Pager.WinControl.FrmSelectColumnDisplay.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.FrmSelectColumnDisplay.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.FrmSelectColumnDisplay.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.FrmSelectColumnDisplay.DataGridView">
+            <summary>
+            显示数据的DataGridView对象
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.FrmSelectColumnDisplay.DisplayColumNames">
+            <summary>
+            显示的列名称（按顺序排列）
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.FrmSelectColumnDisplay.ColumnNameAlias">
+            <summary>
+            别名对照字典
+            </summary>
+        </member>
+        <member name="T:WHC.Pager.WinControl.CoolPrintPreviewDialog">
+            <summary>
+            Represents a dialog containing a <see cref="T:WHC.Pager.WinControl.CoolPrintPreviewControl"/> control
+            used to preview and print <see cref="T:System.Drawing.Printing.PrintDocument"/> objects.
+            </summary>
+            <remarks>
+            This dialog is similar to the standard <see cref="T:System.Windows.Forms.PrintPreviewDialog"/>
+            but provides additional options such printer and page setup buttons,
+            a better UI based on the <see cref="T:System.Windows.Forms.ToolStrip"/> control, and built-in
+            PDF export.
+            </remarks>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewDialog.#ctor">
+            <summary>
+            Initializes a new instance of a <see cref="T:WHC.Pager.WinControl.CoolPrintPreviewDialog"/>.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewDialog.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Initializes a new instance of a <see cref="T:WHC.Pager.WinControl.CoolPrintPreviewDialog"/>.
+            </summary>
+            <param name="parentForm">Parent form that defines the initial size for this dialog.</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewDialog.OnShown(System.EventArgs)">
+            <summary>
+            Overridden to assign document to preview control only after the 
+            initial activation.
+            </summary>
+            <param name="e"><see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewDialog.OnFormClosing(System.Windows.Forms.FormClosingEventArgs)">
+            <summary>
+            Overridden to cancel any ongoing previews when closing form.
+            </summary>
+            <param name="e"><see cref="T:System.Windows.Forms.FormClosingEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="F:WHC.Pager.WinControl.CoolPrintPreviewDialog.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.CoolPrintPreviewDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.CoolPrintPreviewDialog.Document">
+            <summary>
+            Gets or sets the <see cref="T:System.Drawing.Printing.PrintDocument"/> to preview.
+            </summary>
+        </member>
+        <!-- 对于成员“T:WHC.Pager.WinControl.PageImageList”忽略有格式错误的 XML 注释 -->
+        <member name="T:WHC.Pager.WinControl.WinGridViewPager">
+            <summary>
+            待分页导航的分页控件
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.AddMenuText">
+            <summary>
+            新建菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.EditMenuText">
+            <summary>
+            编辑菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.DeleteMenuText">
+            <summary>
+            删除菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.RefreshMenuText">
+            <summary>
+            刷新菜单的显示内容
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.AllToExport">
+            <summary>
+            导出全部的数据源
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.ShowLineNumber">
+            <summary>
+            是否显示行号
+            </summary>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.EventRowBackColor">
+            <summary>
+            获取或设置奇数行的背景色
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.GetDisplayColumnIndex(System.String)">
+            <summary>
+            返回对应字段的显示顺序，如果没有，返回-1
+            </summary>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.pager_ExportAll(System.Object,System.EventArgs)">
+            <summary>
+            导出所有记录的事件
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.pager_ExportCurrent(System.Object,System.EventArgs)">
+            <summary>
+            导出当前页记录的事件
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.StartExport(System.String)">
+            <summary>
+            starts the export to new excel document
+            </summary>
+            <param name="filepath">the file to export to</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.bg_DoWork(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+            使用背景线程导出Excel文档
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.GetCheckedRows">
+            <summary>
+            获取勾选上的行索引列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.AddColumnAlias(System.String,System.String)">
+            <summary>
+            添加列名的别名
+            </summary>
+            <param name="key">列的原始名称</param>
+            <param name="alias">列的别名</param>
+        </member>
+        <member name="F:WHC.Pager.WinControl.WinGridViewPager.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:WHC.Pager.WinControl.WinGridViewPager.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.ShowCheckBox">
+            <summary>
+            是否显示CheckBox列
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.ShowExportButton">
+            <summary>
+            是否显示导出按钮
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.ShowAddMenu">
+            <summary>
+            是否显示新建菜单
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.ShowEditMenu">
+            <summary>
+            是否显示编辑菜单
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.ShowDeleteMenu">
+            <summary>
+            是否显示删除菜单
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.ColumnNameAlias">
+            <summary>
+            列名的别名字典集合
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnStartExport">
+            <summary>
+            导出Excel前执行的操作
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnEndExport">
+            <summary>
+            导出Excel后执行的操作
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnPageChanged">
+            <summary>
+            页面变化的操作
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnEditSelected">
+            <summary>
+            双击控件实现的操作，实现后出现右键菜单“编辑选定项”
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnDeleteSelected">
+            <summary>
+            实现事件后出现“删除选定项”菜单项
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnRefresh">
+            <summary>
+            实现事件后出现“更新”菜单项
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnAddNew">
+            <summary>
+            实现事件后，出现“新建”菜单项
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnGridViewMouseClick">
+            <summary>
+            实现对单击GirdView控件的响应
+            </summary>
+        </member>
+        <member name="E:WHC.Pager.WinControl.WinGridViewPager.OnGridViewMouseDoubleClick">
+            <summary>
+            实现对双击GirdView控件的响应
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.AppendedMenu">
+            <summary>
+            追加的菜单项目
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.DataSource">
+            <summary>
+            获取或设置的数据源
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.DisplayColumns">
+            <summary>
+            显示的列内容，需要指定以防止GridView乱序
+            使用"|"或者","分开每个列，如“ID|Name”
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.PagerInfo">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:WHC.Pager.WinControl.WinGridViewPager.PrintTitle">
+            <summary>
+            打印报表的抬头（标题）
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.ReflectionUtil.SetProperty(System.Object,System.String,System.Object)">
+            <summary>
+            设置对象属性的值
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.ReflectionUtil.GetProperty(System.Object,System.String)">
+            <summary>
+            获取对象属性的值
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.ReflectionUtil.GetPropertyNames(System.Object)">
+            <summary>
+            获取对象属性信息（组装成字符串输出）
+            </summary>
+        </member>
+        <member name="M:WHC.Pager.WinControl.ReflectionUtil.GetPropertyNameTypes(System.Object)">
+            <summary>
+            获取对象属性信息（组装成字符串输出）
+            </summary>
+        </member>
+    </members>
+</doc>
