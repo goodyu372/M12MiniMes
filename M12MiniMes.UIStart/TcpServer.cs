@@ -459,6 +459,7 @@ namespace M12MiniMes.UIStart
                         case Header.XRSBZT://写入设备状态//plc发送数据格式：{XRSBZT,设备id，设备名称，设备状态代号，报警代号}举例：XRSBZT,1,,01，02
                             strInMachineID = parameters[0];
                             strInMachineName = parameters[1];
+
                             int strInMachineStatusID= Convert.ToInt32(parameters[2]);
                             //strInMachineStatus = parameters[2];//需要根据代号来获取设备状态（启动、暂停、维修、点检、报警）
                             if(MachineStatus.machineStatus.DicMachineStatus.Keys.Contains(strInMachineStatusID))
@@ -470,21 +471,27 @@ namespace M12MiniMes.UIStart
                                 strInMachineStatus = "";
                             }
 
-                           int strInMachineAlarmID = Convert.ToInt32(parameters[3]);
-                            //strInMachineAlarmInformation = parameters[3];//需要根据代号来获取报警信息，建立一个字典，来获取报警信息
-                            if (MachineStatus.machineStatus.DicMachineAlarmInformation.Keys.Contains(strInMachineAlarmID))
+                            bool b = int.TryParse(parameters[3], out int strInMachineAlarmID);                          
+                           
+                            if(b)
                             {
-                                strInMachineAlarmInformation = MachineStatus.machineStatus.DicMachineAlarmInformation[strInMachineAlarmID];
+                                if (MachineStatus.machineStatus.DicMachineAlarmInformation.Keys.Contains(strInMachineAlarmID))
+                                {
+                                    strInMachineAlarmInformation = MachineStatus.machineStatus.DicMachineAlarmInformation[strInMachineAlarmID];
+                                }
+                                else
+                                {
+                                    strInMachineAlarmInformation = "";                                    
+                                }
                             }
                             else
                             {
                                 strInMachineAlarmInformation = "";
-;                            }
-
+                            }
 
                             设备状态表Info MachineStatu = new 设备状态表Info();
                             MachineStatu.发生时间 = DateTime.Now;
-                            MachineStatu.设备id = Convert.ToInt32(strInMachineID);
+                            MachineStatu.设备id = int.Parse(strInMachineID);
                             MachineStatu.设备名称 = strInMachineName;
                             MachineStatu.设备状态 = strInMachineStatus;
                             MachineStatu.报警信息 = strInMachineAlarmInformation;
