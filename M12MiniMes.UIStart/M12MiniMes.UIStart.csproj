@@ -10,15 +10,16 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>M12MiniMes.UIStart</RootNamespace>
     <AssemblyName>M12MiniMes.UIStart</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\Faster\App\UserForms\</OutputPath>
+    <OutputPath>..\..\..\Fi\App\UserForms\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -37,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommunicateCenter">
-      <HintPath>..\..\..\..\Faster\App\HardWares\CommunicateCenter.dll</HintPath>
+      <HintPath>..\..\..\Fi\App\HardWares\CommunicateCenter.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v21.2">
@@ -70,12 +71,12 @@
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Faster.Core">
-      <HintPath>..\..\..\..\Faster\Faster.Core.dll</HintPath>
+    <Reference Include="Fi.Core">
+      <HintPath>..\..\..\Fi\Fi.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="FastInterface">
-      <HintPath>..\..\..\..\Faster\App\Common\FastInterface.dll</HintPath>
+    <Reference Include="FiInterface">
+      <HintPath>..\..\..\Fi\App\Common\FiInterface.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="M12MinMes.MachineStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -120,6 +121,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

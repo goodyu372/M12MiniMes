@@ -1,4 +1,4 @@
-﻿using Faster.Core;
+﻿using Fi.Core;
 using M12MiniMes.BLL;
 using M12MiniMes.Entity;
 using System;

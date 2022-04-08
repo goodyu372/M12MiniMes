@@ -1,5 +1,5 @@
 ﻿using CommunicateCenter;
-using Faster.Core;
+using Fi.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +56,7 @@ namespace M12MiniMes.UIStart
             //});
         }
 
-        private static void Server_DataReceived(FastInterface.ITcpServer listener, Socket client, byte[] data, int length)
+        private static void Server_DataReceived(FiInterface.ITcpServer listener, Socket client, byte[] data, int length)
         {
             lock (objLock)
             {

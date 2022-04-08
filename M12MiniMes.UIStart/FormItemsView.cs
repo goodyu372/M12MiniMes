@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Diagnostics;
-using Faster.Core;
+using Fi.Core;
 using System.IO;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;

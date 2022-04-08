@@ -5,11 +5,11 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
-using Faster.Core;
+using Fi.Core;
 using M12MiniMes.UI;
 using CommunicateCenter;
 using System.Drawing;
-using FastInterface;
+using FiInterface;
 using System.Net.Sockets;
 using System.Net;
 using M12MinMes.MachineStatus;
@@ -35,7 +35,7 @@ namespace M12MiniMes.UIStart
 
     public class ServerView : LazyAbstractView2<frmTcpServer>
     {
-        public override Func<frmTcpServer> valueFactory => ()=> new frmTcpServer(TcpServer.Server);
+        public override Func<frmTcpServer> ValueFactory => ()=> new frmTcpServer(TcpServer.Server);
 
         public override string InsertPath => $@"Mes服务器";
 
@@ -46,7 +46,7 @@ namespace M12MiniMes.UIStart
             {
                 //在底部状态栏显示各设备客户端连接状态
                 IBar iBar = IBarManager.Instance.CreateBar(item.设备名称,null,null, 
-                    pp => { pp.BarStatus = new BarStatus() { IsEnable = false /*BackColor = Color.Tomato*/ }; return true; },
+                    pp => { pp.BarEnable = false ; return true; },
                     BarType.Check);
                 //pp => { pp.BarStatus = new BarStatus() { BackColor = Color.Tomato }; return true; }
             }
@@ -81,7 +81,7 @@ namespace M12MiniMes.UIStart
                 if (bar != null)
                 {
                     ICheckBar iCheckbar = bar as ICheckBar;
-                    iCheckbar.bChecked = true;
+                    iCheckbar.BarChecked = true;
                     //bar.BarStatus = new BarStatus() { BackColor = Color.DeepSkyBlue };
                 }
             }
@@ -94,7 +94,7 @@ namespace M12MiniMes.UIStart
                 if (bar != null)
                 {
                     ICheckBar iCheckbar = bar as ICheckBar;
-                    iCheckbar.bChecked = false;
+                    iCheckbar.BarChecked = false;
                     //bar.BarStatus = new BarStatus() { BackColor = Color.Tomato };
                 }
             }
@@ -110,7 +110,7 @@ namespace M12MiniMes.UIStart
                 if (bar != null)
                 {
                     ICheckBar iCheckbar = bar as ICheckBar;
-                    iCheckbar.bChecked = false;
+                    iCheckbar.BarChecked = false;
                     //bar.BarStatus = new BarStatus() { BackColor = Color.Tomato };
                 }
             }

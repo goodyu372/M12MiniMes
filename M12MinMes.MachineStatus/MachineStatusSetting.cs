@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Faster.Core;
+using Fi.Core;
 
 
 namespace M12MinMes.MachineStatus

@@ -10,7 +10,7 @@ namespace M12MinMes.MachineStatus
 {
    public static class MachineStatusSerializable
     {
-        const string serializeFileName = @"D:\Faster.Data\MachineStatus\MachineStatus.bin";//const表示常量
+        const string serializeFileName = @"D:\Fi.Data\MachineStatus\MachineStatus.bin";//const表示常量
 
         public static bool SaveMachineStatus()
         {
