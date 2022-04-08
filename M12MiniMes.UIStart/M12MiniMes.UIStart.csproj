@@ -79,10 +79,9 @@
       <HintPath>..\..\..\Fi\App\Common\FiInterface.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="M12MinMes.MachineStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="M12MinMes.MachineStatus, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Faster\App\UserForms\M12MinMes.MachineStatus.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\Fi\App\UserForms\M12MinMes.MachineStatus.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
