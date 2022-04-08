@@ -84,7 +84,7 @@ namespace M12MiniMes.UIStart
         /// <returns></returns>
         public bool Save()
         {
-            CommonSerializer.SaveObjAsBinaryFile(instance, $@"D:\Faster.Data\ItemManager.xml", out bool bSaveOK, out Exception ex);
+            CommonSerializer.SaveObjAsBinaryFile(instance, $@"D:\Fi.Data\ItemManager.xml", out bool bSaveOK, out Exception ex);
             return bSaveOK;
         }
 
@@ -94,7 +94,7 @@ namespace M12MiniMes.UIStart
         /// <returns></returns>
         public bool Load()
         {
-            instance = CommonSerializer.LoadObjFromBinaryFile<ItemManager>($@"D:\Faster.Data\ItemManager.xml", out bool bLoadOK, out Exception ex);
+            instance = CommonSerializer.LoadObjFromBinaryFile<ItemManager>($@"D:\Fi.Data\ItemManager.xml", out bool bLoadOK, out Exception ex);
             return bLoadOK; 
         }
 

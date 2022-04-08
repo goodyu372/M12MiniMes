@@ -367,6 +367,7 @@ namespace M12MinMes.MachineStatus
             this.label3.Size = new System.Drawing.Size(240, 69);
             this.label3.TabIndex = 0;
             this.label3.Text = "报警代码";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label4
             // 
@@ -377,6 +378,7 @@ namespace M12MinMes.MachineStatus
             this.label4.Size = new System.Drawing.Size(240, 70);
             this.label4.TabIndex = 1;
             this.label4.Text = "报警内容";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // AlarmID_textBox
             // 
@@ -441,9 +443,10 @@ namespace M12MinMes.MachineStatus
             // 
             // SaveAlarm_button1
             // 
+            this.SaveAlarm_button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SaveAlarm_button1.Location = new System.Drawing.Point(992, 4);
             this.SaveAlarm_button1.Name = "SaveAlarm_button1";
-            this.SaveAlarm_button1.Size = new System.Drawing.Size(219, 63);
+            this.SaveAlarm_button1.Size = new System.Drawing.Size(241, 63);
             this.SaveAlarm_button1.TabIndex = 8;
             this.SaveAlarm_button1.Text = "保存";
             this.SaveAlarm_button1.UseVisualStyleBackColor = true;
@@ -470,7 +473,7 @@ namespace M12MinMes.MachineStatus
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1231, 51);
+            this.panel1.Size = new System.Drawing.Size(1231, 52);
             this.panel1.TabIndex = 0;
             // 
             // label5
@@ -489,11 +492,11 @@ namespace M12MinMes.MachineStatus
             // 
             this.Alarm_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Alarm_dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Alarm_dataGridView.Location = new System.Drawing.Point(3, 60);
+            this.Alarm_dataGridView.Location = new System.Drawing.Point(3, 61);
             this.Alarm_dataGridView.Name = "Alarm_dataGridView";
             this.Alarm_dataGridView.RowHeadersWidth = 51;
             this.Alarm_dataGridView.RowTemplate.Height = 27;
-            this.Alarm_dataGridView.Size = new System.Drawing.Size(1231, 541);
+            this.Alarm_dataGridView.Size = new System.Drawing.Size(1231, 540);
             this.Alarm_dataGridView.TabIndex = 1;
             this.Alarm_dataGridView.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Alarm_dataGridView_CellMouseDoubleClick);
             // 
