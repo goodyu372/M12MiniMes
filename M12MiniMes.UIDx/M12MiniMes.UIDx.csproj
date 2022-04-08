@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Faster\App\3rdDlls\</OutputPath>
+    <OutputPath>..\..\..\..\Faster\App\3rdDlls\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -88,12 +88,14 @@
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
       <HintPath>..\..\Reference\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.ObjectBuilder2">
       <HintPath>..\..\Reference\EnterpriseLibrary\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Reference\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -108,15 +110,18 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="WHC.DictionaryDx">
       <HintPath>..\Reference\WHC.DictionaryDx.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WHC.Security">
       <HintPath>..\Reference\WHC.Security.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\M12MiniMes.Core\M12MiniMes.Core.csproj">
       <Project>{dcdbcad0-065d-41d6-ad37-868396364ff7}</Project>
       <Name>M12MiniMes.Core</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\WHC.Framework.BaseUIDx\WHC.Framework.BaseUIDx.csproj">
       <Project>{a22e5819-92fe-43d2-8da7-6a2b9c2d25db}</Project>
@@ -141,6 +146,7 @@
     <ProjectReference Include="..\WHC.Pager.Entity\WHC.Pager.Entity.csproj">
       <Project>{8d58654e-3fdb-4f5f-921a-7832db994dce}</Project>
       <Name>WHC.Pager.Entity</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\WHC.Pager.WinControlDx\WHC.Pager.WinControlDx.csproj">
       <Project>{bad3d23b-ef02-4367-a929-a28a5644eb7e}</Project>
@@ -169,6 +175,12 @@
     <Compile Include="UI\FrmEdit生产数据表.designer.cs">
       <DependentUpon>FrmEdit生产数据表.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FrmEdit设备状态表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmEdit设备状态表.designer.cs">
+      <DependentUpon>FrmEdit设备状态表.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmEdit设备表.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +205,12 @@
     <Compile Include="UI\Frm生产数据表.designer.cs">
       <DependentUpon>Frm生产数据表.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Frm设备状态表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Frm设备状态表.Designer.cs">
+      <DependentUpon>Frm设备状态表.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Frm设备表.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +223,9 @@
     <EmbeddedResource Include="UI\FrmEdit生产数据表.resx">
       <DependentUpon>FrmEdit生产数据表.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmEdit设备状态表.resx">
+      <DependentUpon>FrmEdit设备状态表.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmEdit设备表.resx">
       <DependentUpon>FrmEdit设备表.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Frm生产数据表.resx">
       <DependentUpon>Frm生产数据表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Frm设备状态表.resx">
+      <DependentUpon>Frm设备状态表.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\licenses.licx" />

@@ -11,6 +11,7 @@ using M12MiniMes.Entity;
 using WHC.Framework.ControlUtil;
 using M12MiniMes.BLL;
 using System.Runtime.CompilerServices;
+using M12MinMes.MachineStatus;
 
 namespace M12MiniMes.UIStart
 {
@@ -102,6 +103,10 @@ namespace M12MiniMes.UIStart
                     string rfid = "";
                     FixtureItem fixtureItem = null; //当前治具
                     byte[] dataSend = null;
+
+                    //设备状态表添加
+                    string strInMachineStatus = "";//当前流入的设备状态
+                    string strInMachineAlarmInformation = "";//当前流入的设备报警信息
 
                     switch (header)
                     {
@@ -446,8 +451,51 @@ namespace M12MiniMes.UIStart
                             dataSend = Encoding.UTF8.GetBytes(strM);
                             listener.SendMesAsyncToClient(client, dataSend);
                             break;
-                    }
 
+                        case Header.CXSBZT://查询设备状态//plc发送数据格式：CXSBZT,查询的设备id
+
+                            break;
+
+                        case Header.XRSBZT://写入设备状态//plc发送数据格式：{XRSBZT,设备id，设备名称，设备状态代号，报警代号}举例：XRSBZT,1,,01，02
+                            strInMachineID = parameters[0];
+                            strInMachineName = parameters[1];
+                            int strInMachineStatusID= Convert.ToInt32(parameters[2]);
+                            //strInMachineStatus = parameters[2];//需要根据代号来获取设备状态（启动、暂停、维修、点检、报警）
+                            if(MachineStatus.machineStatus.DicMachineStatus.Keys.Contains(strInMachineStatusID))
+                            {
+                                strInMachineStatus = MachineStatus.machineStatus.DicMachineStatus[strInMachineStatusID];
+                            }
+                            else
+                            {
+                                strInMachineStatus = "";
+                            }
+
+                           int strInMachineAlarmID = Convert.ToInt32(parameters[3]);
+                            //strInMachineAlarmInformation = parameters[3];//需要根据代号来获取报警信息，建立一个字典，来获取报警信息
+                            if (MachineStatus.machineStatus.DicMachineAlarmInformation.Keys.Contains(strInMachineAlarmID))
+                            {
+                                strInMachineAlarmInformation = MachineStatus.machineStatus.DicMachineAlarmInformation[strInMachineAlarmID];
+                            }
+                            else
+                            {
+                                strInMachineAlarmInformation = "";
+;                            }
+
+
+                            设备状态表Info MachineStatu = new 设备状态表Info();
+                            MachineStatu.发生时间 = DateTime.Now;
+                            MachineStatu.设备id = Convert.ToInt32(strInMachineID);
+                            MachineStatu.设备名称 = strInMachineName;
+                            MachineStatu.设备状态 = strInMachineStatus;
+                            MachineStatu.报警信息 = strInMachineAlarmInformation;
+                            
+                            BLLFactory<设备状态表>.Instance.Insert(MachineStatu);//向表中插入一条信息
+                            dataSend = Encoding.UTF8.GetBytes("XRSBZTOK"); //返回下位机"写入完成"
+                            listener.SendMesAsyncToClient(client, dataSend);
+                            break;
+
+                    }
+                    
                     //ItemManager.Instance.Save(); //每通讯一次就保存一次内存数据  20200903改为Program.cs 124行 关闭软件时保存内存数据 减少保存频率
                 }
                 catch (Exception ex)
@@ -466,6 +514,8 @@ namespace M12MiniMes.UIStart
         NGTH, //NG替换
         XT, //心跳
         TL, //投料
-        CXPC //查询批次信息
+        CXPC ,//查询批次信息
+        XRSBZT,//写入设备状态
+        CXSBZT//查询设备状态
     }
 }

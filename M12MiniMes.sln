@@ -54,6 +54,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHC.Dictionary.Core", "WHC.
 		{53AC195E-DCFF-47C4-BC02-7E0241FF520C} = {53AC195E-DCFF-47C4-BC02-7E0241FF520C}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M12MinMes.MachineStatus", "M12MinMes.MachineStatus\M12MinMes.MachineStatus.csproj", "{F500FA22-07EA-4EE2-8DCE-B377295FFE62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -220,6 +222,18 @@ Global
 		{5271F727-907A-473B-8C7D-1CDCEC8F7006}.Release|x64.Build.0 = Release|x64
 		{5271F727-907A-473B-8C7D-1CDCEC8F7006}.Release|x86.ActiveCfg = Release|x86
 		{5271F727-907A-473B-8C7D-1CDCEC8F7006}.Release|x86.Build.0 = Release|x86
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Debug|x64.Build.0 = Debug|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Debug|x86.Build.0 = Debug|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Release|x64.ActiveCfg = Release|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Release|x64.Build.0 = Release|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Release|x86.ActiveCfg = Release|Any CPU
+		{F500FA22-07EA-4EE2-8DCE-B377295FFE62}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

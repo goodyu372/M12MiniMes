@@ -150,7 +150,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1928, 805);
+            this.gridControl1.Size = new System.Drawing.Size(2260, 805);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
@@ -436,7 +436,7 @@
             this.bt同步.Location = new System.Drawing.Point(0, 904);
             this.bt同步.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.bt同步.Name = "bt同步";
-            this.bt同步.Size = new System.Drawing.Size(1928, 99);
+            this.bt同步.Size = new System.Drawing.Size(2260, 99);
             this.bt同步.TabIndex = 12;
             this.bt同步.Text = "【慎点】：从数据库同步设备信息并清空当前内存数据";
             this.bt同步.Click += new System.EventHandler(this.bt同步_Click);
@@ -451,7 +451,7 @@
             this.bt刷新.Location = new System.Drawing.Point(0, 805);
             this.bt刷新.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.bt刷新.Name = "bt刷新";
-            this.bt刷新.Size = new System.Drawing.Size(1928, 99);
+            this.bt刷新.Size = new System.Drawing.Size(2260, 99);
             this.bt刷新.TabIndex = 13;
             this.bt刷新.Text = "刷新";
             this.bt刷新.Click += new System.EventHandler(this.bt刷新_Click);
@@ -461,7 +461,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1949, 979);
+            this.ClientSize = new System.Drawing.Size(2281, 979);
             this.Controls.Add(this.bt刷新);
             this.Controls.Add(this.bt同步);
             this.Controls.Add(this.gridControl1);

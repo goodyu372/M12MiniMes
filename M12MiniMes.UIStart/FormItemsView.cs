@@ -84,7 +84,7 @@ namespace M12MiniMes.UIStart
 
         private void bt同步_Click(object sender, EventArgs e)
         {
-            if (MessageService.AskQuestion("只建议在第一次配置好设备表后操作！此步会从数据库设备表中同步信息，且会清空当前内存的所有治具、物料信息！在警告后还要继续操作码？"))
+            if (MessageService.AskQuestion("只建议在第一次配置好设备表后操作！此步会从数据库设备表中同步信息，且会清空当前内存的所有治具、物料信息！在警告后还要继续操作吗？"))
             {
                 ItemManager.Instance.GetMachineItems();
                 this.gridControl1.DataSource = ItemManager.Instance.MachineItems;

@@ -37,7 +37,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\Faster\App\3rdDlls\</OutputPath>
+    <OutputPath>..\..\..\..\Faster\App\3rdDlls\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -76,21 +76,26 @@
   <ItemGroup>
     <Reference Include="EntLibContrib.Data.MySql">
       <HintPath>..\Reference\EnterpriseLibrary\EntLibContrib.Data.MySql.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="EntLibContrib.Data.SQLite">
       <HintPath>..\Reference\EnterpriseLibrary\EntLibContrib.Data.SQLite.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
       <HintPath>..\Reference\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
       <HintPath>..\Reference\EnterpriseLibrary\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Data.SQLite">
       <HintPath>..\Reference\EnterpriseLibrary\System.Data.SQLite.DLL</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -98,19 +103,26 @@
     <Reference Include="System.Xml" />
     <Reference Include="WHC.Framework.Commons">
       <HintPath>..\Reference\WHC.Framework.Commons.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WHC.Framework.ControlUtil">
       <HintPath>..\Reference\WHC.Framework.ControlUtil.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WHC.Pager.Entity">
       <HintPath>..\Reference\WHC.Pager.Entity.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\物料ng替换记录表.cs" />
+    <Compile Include="BLL\设备状态表.cs" />
     <Compile Include="DAL\DALSQL\物料ng替换记录表.cs" />
+    <Compile Include="DAL\DALSQL\设备状态表.cs" />
     <Compile Include="Entity\物料ng替换记录表Info.cs" />
+    <Compile Include="Entity\设备状态表Info.cs" />
     <Compile Include="IDAL\I物料ng替换记录表.cs" />
+    <Compile Include="IDAL\I设备状态表.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BLL\设备表.cs" />
     <Compile Include="BLL\生产批次生成表.cs" />

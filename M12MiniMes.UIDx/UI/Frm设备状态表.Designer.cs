@@ -1,0 +1,394 @@
+namespace M12MiniMes.UI
+{
+    partial class Frm设备状态表
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm设备状态表));
+            this.btnAddNew = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSearch = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+            this.winGridViewPager1 = new WHC.Pager.WinControl.WinGridViewPager();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.txt发生时间1 = new DevExpress.XtraEditors.DateEdit();
+            this.txt发生时间2 = new DevExpress.XtraEditors.DateEdit();
+            this.txt设备id1 = new DevExpress.XtraEditors.TextEdit();
+            this.txt设备id2 = new DevExpress.XtraEditors.TextEdit();
+            this.txt设备名称 = new DevExpress.XtraEditors.TextEdit();
+            this.txt设备状态 = new DevExpress.XtraEditors.TextEdit();
+            this.txt报警信息 = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
+            this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间2.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备id1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备id2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备名称.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备状态.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt报警信息.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnAddNew
+            // 
+            this.btnAddNew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddNew.Location = new System.Drawing.Point(773, 90);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(69, 22);
+            this.btnAddNew.TabIndex = 15;
+            this.btnAddNew.Text = "新建";
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Location = new System.Drawing.Point(698, 90);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(69, 22);
+            this.btnSearch.TabIndex = 14;
+            this.btnSearch.Text = "查询";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExport.Location = new System.Drawing.Point(923, 90);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(69, 22);
+            this.btnExport.TabIndex = 15;
+            this.btnExport.Text = "导出";
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImport.Location = new System.Drawing.Point(848, 90);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(69, 22);
+            this.btnImport.TabIndex = 15;
+            this.btnImport.Text = "导入";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // winGridViewPager1
+            // 
+            this.winGridViewPager1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.winGridViewPager1.AppendedMenu = null;
+            this.winGridViewPager1.ColumnNameAlias = ((System.Collections.Generic.Dictionary<string, string>)(resources.GetObject("winGridViewPager1.ColumnNameAlias")));
+            this.winGridViewPager1.DataSource = null;
+            this.winGridViewPager1.DisplayColumns = "";
+            this.winGridViewPager1.FixedColumns = null;
+            this.winGridViewPager1.IsExportAllPage = false;
+            this.winGridViewPager1.Location = new System.Drawing.Point(12, 120);
+            this.winGridViewPager1.MinimumSize = new System.Drawing.Size(540, 0);
+            this.winGridViewPager1.Name = "winGridViewPager1";
+            this.winGridViewPager1.PrintTitle = "";
+            this.winGridViewPager1.ShowAddMenu = true;
+            this.winGridViewPager1.ShowCheckBox = false;
+            this.winGridViewPager1.ShowDeleteMenu = true;
+            this.winGridViewPager1.ShowEditMenu = true;
+            this.winGridViewPager1.ShowExportButton = true;
+            this.winGridViewPager1.Size = new System.Drawing.Size(980, 555);
+            this.winGridViewPager1.TabIndex = 11;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // layoutControl1
+            // 
+            this.layoutControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.layoutControl1.Controls.Add(this.txt发生时间1);
+            this.layoutControl1.Controls.Add(this.txt发生时间2);
+            this.layoutControl1.Controls.Add(this.txt设备id1);
+            this.layoutControl1.Controls.Add(this.txt设备id2);
+            this.layoutControl1.Controls.Add(this.txt设备名称);
+            this.layoutControl1.Controls.Add(this.txt设备状态);
+            this.layoutControl1.Controls.Add(this.txt报警信息);
+            this.layoutControl1.Location = new System.Drawing.Point(12, 8);
+            this.layoutControl1.Name = "layoutControl1";
+            this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(70, 185, 250, 350);
+            this.layoutControl1.Root = this.layoutControlGroup1;
+            this.layoutControl1.Size = new System.Drawing.Size(980, 78);
+            this.layoutControl1.TabIndex = 12;
+            this.layoutControl1.Text = "layoutControl1";
+            // 
+            // txt发生时间1
+            // 
+            this.txt发生时间1.EditValue = null;
+            this.txt发生时间1.Location = new System.Drawing.Point(84, 12);
+            this.txt发生时间1.Name = "txt发生时间1";
+            this.txt发生时间1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt发生时间1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txt发生时间1.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.txt发生时间1.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txt发生时间1.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.txt发生时间1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txt发生时间1.Size = new System.Drawing.Size(84, 24);
+            this.txt发生时间1.StyleController = this.layoutControl1;
+            this.txt发生时间1.TabIndex = 1;
+            // 
+            // txt发生时间2
+            // 
+            this.txt发生时间2.EditValue = null;
+            this.txt发生时间2.Location = new System.Drawing.Point(244, 12);
+            this.txt发生时间2.Name = "txt发生时间2";
+            this.txt发生时间2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txt发生时间2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txt发生时间2.Properties.CalendarTimeProperties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.txt发生时间2.Properties.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txt发生时间2.Properties.DisplayFormat.FormatString = "yyyy-MM-dd";
+            this.txt发生时间2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txt发生时间2.Size = new System.Drawing.Size(84, 24);
+            this.txt发生时间2.StyleController = this.layoutControl1;
+            this.txt发生时间2.TabIndex = 2;
+            // 
+            // txt设备id1
+            // 
+            this.txt设备id1.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txt设备id1.Location = new System.Drawing.Point(404, 12);
+            this.txt设备id1.Name = "txt设备id1";
+            this.txt设备id1.Size = new System.Drawing.Size(84, 24);
+            this.txt设备id1.StyleController = this.layoutControl1;
+            this.txt设备id1.TabIndex = 3;
+            // 
+            // txt设备id2
+            // 
+            this.txt设备id2.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.txt设备id2.Location = new System.Drawing.Point(564, 12);
+            this.txt设备id2.Name = "txt设备id2";
+            this.txt设备id2.Size = new System.Drawing.Size(84, 24);
+            this.txt设备id2.StyleController = this.layoutControl1;
+            this.txt设备id2.TabIndex = 4;
+            // 
+            // txt设备名称
+            // 
+            this.txt设备名称.Location = new System.Drawing.Point(724, 12);
+            this.txt设备名称.Name = "txt设备名称";
+            this.txt设备名称.Size = new System.Drawing.Size(84, 24);
+            this.txt设备名称.StyleController = this.layoutControl1;
+            this.txt设备名称.TabIndex = 5;
+            // 
+            // txt设备状态
+            // 
+            this.txt设备状态.Location = new System.Drawing.Point(884, 12);
+            this.txt设备状态.Name = "txt设备状态";
+            this.txt设备状态.Size = new System.Drawing.Size(84, 24);
+            this.txt设备状态.StyleController = this.layoutControl1;
+            this.txt设备状态.TabIndex = 6;
+            // 
+            // txt报警信息
+            // 
+            this.txt报警信息.Location = new System.Drawing.Point(84, 40);
+            this.txt报警信息.Name = "txt报警信息";
+            this.txt报警信息.Size = new System.Drawing.Size(884, 24);
+            this.txt报警信息.StyleController = this.layoutControl1;
+            this.txt报警信息.TabIndex = 7;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.CustomizationFormText = "layoutControlGroup1";
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem2,
+            this.layoutControlItem3,
+            this.layoutControlItem4,
+            this.layoutControlItem5,
+            this.layoutControlItem6,
+            this.layoutControlItem7});
+            this.layoutControlGroup1.Name = "layoutControlGroup1";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(980, 78);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.txt发生时间1;
+            this.layoutControlItem1.CustomizationFormText = "1";
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(160, 28);
+            this.layoutControlItem1.Text = "发生时间";
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(60, 18);
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.txt发生时间2;
+            this.layoutControlItem2.CustomizationFormText = "2";
+            this.layoutControlItem2.Location = new System.Drawing.Point(160, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(160, 28);
+            this.layoutControlItem2.Text = "发生时间";
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(60, 18);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.txt设备id1;
+            this.layoutControlItem3.CustomizationFormText = "1";
+            this.layoutControlItem3.Location = new System.Drawing.Point(320, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(160, 28);
+            this.layoutControlItem3.Text = "设备id";
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(60, 18);
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.txt设备id2;
+            this.layoutControlItem4.CustomizationFormText = "2";
+            this.layoutControlItem4.Location = new System.Drawing.Point(480, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(160, 28);
+            this.layoutControlItem4.Text = "设备id";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(60, 18);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.txt设备名称;
+            this.layoutControlItem5.Location = new System.Drawing.Point(640, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(160, 28);
+            this.layoutControlItem5.Text = "设备名称";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(60, 18);
+            // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.txt设备状态;
+            this.layoutControlItem6.Location = new System.Drawing.Point(800, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(160, 28);
+            this.layoutControlItem6.Text = "设备状态";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(60, 18);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.txt报警信息;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 28);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(960, 30);
+            this.layoutControlItem7.Text = "报警信息";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(60, 18);
+            // 
+            // Frm设备状态表
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1004, 680);
+            this.Controls.Add(this.layoutControl1);
+            this.Controls.Add(this.winGridViewPager1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnAddNew);
+            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.btnImport);
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("Frm设备状态表.IconOptions.Icon")));
+            this.Name = "Frm设备状态表";
+            this.Text = "设备状态表";
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
+            this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt发生时间2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备id1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备id2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备名称.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt设备状态.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt报警信息.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraEditors.SimpleButton btnSearch;
+        private DevExpress.XtraEditors.SimpleButton btnAddNew;
+        private DevExpress.XtraEditors.SimpleButton btnImport;
+        private DevExpress.XtraEditors.SimpleButton btnExport;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private WHC.Pager.WinControl.WinGridViewPager winGridViewPager1;
+
+        private DevExpress.XtraLayout.LayoutControl layoutControl1;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+
+
+        private DevExpress.XtraEditors.DateEdit txt发生时间1;  
+        private DevExpress.XtraEditors.DateEdit txt发生时间2;  
+ 
+        private DevExpress.XtraEditors.TextEdit txt设备id1;  
+        private DevExpress.XtraEditors.TextEdit txt设备id2;  
+ 
+        private DevExpress.XtraEditors.TextEdit txt设备名称; 
+ 
+        private DevExpress.XtraEditors.TextEdit txt设备状态; 
+ 
+        private DevExpress.XtraEditors.TextEdit txt报警信息; 
+ 
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;    
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;  
+         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;    
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;  
+         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;    
+         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;    
+         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;    
+ 
+    }
+}
