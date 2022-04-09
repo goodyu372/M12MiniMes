@@ -460,7 +460,7 @@ namespace M12MiniMes.UIStart
                             strInMachineID = parameters[0];
                             strInMachineName = parameters[1];
 
-                            int strInMachineStatusID= Convert.ToInt32(parameters[2]);
+                            int strInMachineStatusID= int.Parse(parameters[2]);
                             //strInMachineStatus = parameters[2];//需要根据代号来获取设备状态（启动、暂停、维修、点检、报警）
                             if(MachineStatus.machineStatus.DicMachineStatus.Keys.Contains(strInMachineStatusID))
                             {
