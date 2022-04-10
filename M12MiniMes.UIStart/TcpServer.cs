@@ -459,10 +459,8 @@ namespace M12MiniMes.UIStart
                         case Header.XRSBZT://写入设备状态//plc发送数据格式：{XRSBZT,设备id，设备名称，设备状态代号，报警代号}举例：XRSBZT,1,,01，02
                             strInMachineID = parameters[0];
                             strInMachineName = parameters[1];
-
-                            int strInMachineStatusID= int.Parse(parameters[2]);
-                            //strInMachineStatus = parameters[2];//需要根据代号来获取设备状态（启动、暂停、维修、点检、报警）
-                            if(MachineStatus.machineStatus.DicMachineStatus.Keys.Contains(strInMachineStatusID))
+                            int strInMachineStatusID= int.Parse(parameters[2]);//需要根据代号来获取设备状态（启动、暂停、维修、点检、报警）                          
+                            if (MachineStatus.machineStatus.DicMachineStatus.Keys.Contains(strInMachineStatusID))
                             {
                                 strInMachineStatus = MachineStatus.machineStatus.DicMachineStatus[strInMachineStatusID];
                             }
@@ -471,8 +469,7 @@ namespace M12MiniMes.UIStart
                                 strInMachineStatus = "";
                             }
 
-                            bool b = int.TryParse(parameters[3], out int strInMachineAlarmID);                          
-                           
+                            bool b = int.TryParse(parameters[3], out int strInMachineAlarmID);                                                    
                             if(b)
                             {
                                 if (MachineStatus.machineStatus.DicMachineAlarmInformation.Keys.Contains(strInMachineAlarmID))
