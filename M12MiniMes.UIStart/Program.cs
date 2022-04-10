@@ -139,22 +139,7 @@ namespace M12MiniMes.UIStart
         public override string InsertPath => $@"生产内存数据";
     }
 
-    public class View设备状态设置表 : LazyAbstractView<MachineStatusSetting>
-    {
-        public override Func<IBar, bool> FuncSave => p =>
-        {
-            bool b = MachineStatusSerializable.SaveMachineStatus();
-            return b;
-        };
-        public override string InsertPath => $@"设备状态添加设置";
-
-        public override Func<IBar, bool> FuncInitialize => p =>
-        {
-         bool b = MachineStatusSerializable.loadMachineStatus();//设备状态、警报反序列化
-            return b;
-        };
-       
-    }
+    
 
 
     public class View设备工序表 : LazyAbstractView<Frm设备表>
@@ -179,4 +164,20 @@ namespace M12MiniMes.UIStart
         public override string InsertPath => $@"设备状态表";
     }
 
+    public class View设备状态设置表 : LazyAbstractView<MachineStatusSetting>
+    {
+        public override Func<IBar, bool> FuncSave => p =>
+        {
+            bool b = MachineStatusSerializable.SaveMachineStatus();
+            return b;
+        };
+        public override string InsertPath => $@"设备状态添加设置";
+
+        public override Func<IBar, bool> FuncInitialize => p =>
+        {
+            bool b = MachineStatusSerializable.loadMachineStatus();//设备状态、警报反序列化
+            return b;
+        };
+
+    }
 }
