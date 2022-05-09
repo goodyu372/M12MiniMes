@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -175,6 +176,12 @@
     <Compile Include="UI\FrmEdit生产数据表.designer.cs">
       <DependentUpon>FrmEdit生产数据表.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FrmEdit设备状态时长表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmEdit设备状态时长表.designer.cs">
+      <DependentUpon>FrmEdit设备状态时长表.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmEdit设备状态表.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +212,12 @@
     <Compile Include="UI\Frm生产数据表.designer.cs">
       <DependentUpon>Frm生产数据表.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Frm设备状态时长表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Frm设备状态时长表.Designer.cs">
+      <DependentUpon>Frm设备状态时长表.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Frm设备状态表.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +236,9 @@
     <EmbeddedResource Include="UI\FrmEdit生产数据表.resx">
       <DependentUpon>FrmEdit生产数据表.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmEdit设备状态时长表.resx">
+      <DependentUpon>FrmEdit设备状态时长表.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmEdit设备状态表.resx">
       <DependentUpon>FrmEdit设备状态表.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Frm生产数据表.resx">
       <DependentUpon>Frm生产数据表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Frm设备状态时长表.resx">
+      <DependentUpon>Frm设备状态时长表.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Frm设备状态表.resx">
       <DependentUpon>Frm设备状态表.cs</DependentUpon>

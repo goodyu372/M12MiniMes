@@ -495,9 +495,104 @@ namespace M12MiniMes.UIStart
                             
                             BLLFactory<设备状态表>.Instance.Insert(MachineStatu);//向表中插入一条信息
                             dataSend = Encoding.UTF8.GetBytes("XRSBZTOK"); //返回下位机"写入完成"
-                            listener.SendMesAsyncToClient(client, dataSend);
+                            listener.SendMesAsyncToClient(client, dataSend);                           
+                             
                             break;
+                        case Header.XRSC://写入设备各状态运行时长，plc发送数据格式：{XRSC,设备id，设备名称，运行时长，等待时长，暂停时长，手动时长，报警时长，点检时长，维修时长}举例：XRSC,1,,2000,1500,1800,2300,1000,5000,6000
+                            strInMachineID =parameters[0];
+                            strInMachineName = parameters[1];
 
+                            bool brun, bwait, bpause, bmanual, balarm, bspotcheck, bmaintain;
+
+                            brun =int.TryParse( parameters[2],out int runtime);
+                            bwait = int.TryParse(parameters[3], out int waittime);
+                            bpause = int.TryParse(parameters[4], out int pausetime);
+                            bmanual = int.TryParse(parameters[5], out int manualtime);
+                            balarm = int.TryParse(parameters[6], out int alarmtime);
+                            bspotcheck = int.TryParse(parameters[7], out int spotchecktime);
+                            bmaintain = int.TryParse(parameters[8], out int maintaintime);
+
+                            string run, wait, pause, manual, alarm, spotcheck, maintain;
+                            if (brun)//1
+                            {
+                                run= CacluationMethod.GetHMS(runtime);
+                            }
+                            else
+                            {
+                                run = "0";
+                            }
+
+                            if (bwait)//2
+                            {
+                                wait = CacluationMethod.GetHMS(waittime);
+                            }
+                            else
+                            {
+                                wait = "0";
+                            }
+
+                            if (bpause)//3
+                            {
+                                pause = CacluationMethod.GetHMS(pausetime);
+                            }
+                            else
+                            {
+                                pause = "0";
+                            }
+
+                            if (bmanual)//4
+                            {
+                                manual = CacluationMethod.GetHMS(manualtime);
+                            }
+                            else
+                            {
+                                manual = "0";
+                            }
+
+                            if (balarm)//5
+                            {
+                                alarm = CacluationMethod.GetHMS(alarmtime);
+                            }
+                            else
+                            {
+                                alarm = "0";
+                            }
+
+                            if (bspotcheck)//6
+                            {
+                                spotcheck = CacluationMethod.GetHMS(spotchecktime);
+                            }
+                            else
+                            {
+                                spotcheck = "0";
+                            }
+
+                            if (bmaintain)//7
+                            {
+                                maintain = CacluationMethod.GetHMS(maintaintime);
+                            }
+                            else
+                            {
+                                maintain = "0";
+                            }
+                            设备状态时长表Info StatuTime = new 设备状态时长表Info();
+
+                            StatuTime.设备id = int.Parse(strInMachineID);
+                            StatuTime.设备名称 = strInMachineName;
+                            StatuTime.记录时间 = DateTime.Now;
+                            StatuTime.运行 = run;
+                            StatuTime.等待 = wait;
+                            StatuTime.暂停 = pause;
+                            StatuTime.手动 = manual;
+                            StatuTime.报警 = alarm;
+                            StatuTime.点检 = spotcheck;
+                            StatuTime.维修 = maintain;
+
+                            BLLFactory<设备状态时长表>.Instance.Insert(StatuTime);//向表中插入一条信息
+                            dataSend = Encoding.UTF8.GetBytes("XRCSOK"); //返回下位机"写入完成"
+                            listener.SendMesAsyncToClient(client, dataSend);
+
+                            break;
                     }
                     
                     //ItemManager.Instance.Save(); //每通讯一次就保存一次内存数据  20200903改为Program.cs 124行 关闭软件时保存内存数据 减少保存频率
@@ -520,6 +615,11 @@ namespace M12MiniMes.UIStart
         TL, //投料
         CXPC ,//查询批次信息
         XRSBZT,//写入设备状态
-        CXSBZT//查询设备状态
+        CXSBZT,//查询设备状态
+        XRSC//写入时长
     }
+
+   
+
+
 }

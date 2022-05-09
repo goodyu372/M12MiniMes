@@ -164,6 +164,11 @@ namespace M12MiniMes.UIStart
         public override string InsertPath => $@"设备状态表";
     }
 
+    public class View设备状态时长表 : LazyAbstractView<Frm设备状态时长表>
+    {
+        public override string InsertPath => $@"设备状态时长表";
+    }
+
     public class View设备状态设置表 : LazyAbstractView<MachineStatusSetting>
     {
         public override Func<IBar, bool> FuncSave => p =>
@@ -178,6 +183,7 @@ namespace M12MiniMes.UIStart
             bool b = MachineStatusSerializable.loadMachineStatus();//设备状态、警报反序列化
             return b;
         };
+
 
     }
 }
