@@ -105,12 +105,23 @@
     </Compile>
     <Compile Include="ItemManager.cs" />
     <Compile Include="MachineItem.cs" />
+    <Compile Include="MachineStatus.cs" />
+    <Compile Include="MachineStatusSerializable.cs" />
+    <Compile Include="MachineStatusSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MachineStatusSetting.Designer.cs">
+      <DependentUpon>MachineStatusSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaterialItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TcpServer.cs" />
     <EmbeddedResource Include="FormItemsView.resx">
       <DependentUpon>FormItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MachineStatusSetting.resx">
+      <DependentUpon>MachineStatusSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

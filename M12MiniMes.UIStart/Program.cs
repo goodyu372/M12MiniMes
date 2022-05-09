@@ -12,7 +12,7 @@ using System.Drawing;
 using FiInterface;
 using System.Net.Sockets;
 using System.Net;
-using M12MinMes.MachineStatus;
+//using M12MinMes.MachineStatus;
 
 namespace M12MiniMes.UIStart
 {
@@ -29,6 +29,7 @@ namespace M12MiniMes.UIStart
 
             BonusSkins.Register();
             Application.Run(new FormItemsView());
+          
         }
     }
 
@@ -177,6 +178,14 @@ namespace M12MiniMes.UIStart
             bool b = MachineStatusSerializable.SaveMachineStatus();
             return b;
         };
+
+        //public override Func<IView, bool> FuncCloseView => p =>
+        //{
+        //    bool b = MachineStatusSerializable.SaveMachineStatus();
+        //    return b;
+        //};
+
+
         public override string InsertPath => $@"设备状态添加设置";
 
         public override Func<IBar, bool> FuncInitialize => p =>

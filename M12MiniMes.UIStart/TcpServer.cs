@@ -11,7 +11,7 @@ using M12MiniMes.Entity;
 using WHC.Framework.ControlUtil;
 using M12MiniMes.BLL;
 using System.Runtime.CompilerServices;
-using M12MinMes.MachineStatus;
+//using M12MinMes.MachineStatus;
 
 namespace M12MiniMes.UIStart
 {
