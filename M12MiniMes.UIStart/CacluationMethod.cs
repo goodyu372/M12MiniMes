@@ -15,7 +15,7 @@ namespace M12MiniMes.UIStart
             int M= (int)(H1/60);
             int M1 = (int)(H1%60);
             int S = (int)M1;
-            string str =M.ToString()+":"+H.ToString()+":"+S.ToString();
+            string str =H.ToString()+":"+M.ToString()+":"+S.ToString();
             return str;
         }
 

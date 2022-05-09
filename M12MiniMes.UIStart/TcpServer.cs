@@ -589,7 +589,7 @@ namespace M12MiniMes.UIStart
                             StatuTime.维修 = maintain;
 
                             BLLFactory<设备状态时长表>.Instance.Insert(StatuTime);//向表中插入一条信息
-                            dataSend = Encoding.UTF8.GetBytes("XRCSOK"); //返回下位机"写入完成"
+                            dataSend = Encoding.UTF8.GetBytes("XRSCOK"); //返回下位机"写入完成"
                             listener.SendMesAsyncToClient(client, dataSend);
 
                             break;
