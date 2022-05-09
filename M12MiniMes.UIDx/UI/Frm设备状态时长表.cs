@@ -515,13 +515,6 @@ namespace M12MiniMes.UI
                 condition.AddNumericCondition("设备id", this.txt设备id1, this.txt设备id2); //数值类型
                 condition.AddCondition("设备名称", this.txt设备名称.Text.Trim(), SqlOperator.Like);
                 condition.AddDateCondition("记录时间", this.txt记录时间1, this.txt记录时间2); //日期类型
-                condition.AddCondition("运行", this.txt运行.Text.Trim(), SqlOperator.Like);
-                condition.AddCondition("等待", this.txt等待.Text.Trim(), SqlOperator.Like);
-                condition.AddCondition("暂停", this.txt暂停.Text.Trim(), SqlOperator.Like);
-                condition.AddCondition("手动", this.txt手动.Text.Trim(), SqlOperator.Like);
-                condition.AddCondition("报警", this.txt报警.Text.Trim(), SqlOperator.Like);
-                condition.AddCondition("点检", this.txt点检.Text.Trim(), SqlOperator.Like);
-                condition.AddCondition("维修", this.txt维修.Text.Trim(), SqlOperator.Like);
             }
             string where = condition.BuildConditionSql().Replace("Where", "");
             return where;

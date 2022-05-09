@@ -169,6 +169,7 @@ namespace M12MiniMes.UIStart
         public override string InsertPath => $@"设备状态时长表";
     }
 
+
     public class View设备状态设置表 : LazyAbstractView<MachineStatusSetting>
     {
         public override Func<IBar, bool> FuncSave => p =>
