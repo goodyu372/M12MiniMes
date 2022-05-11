@@ -580,6 +580,15 @@ namespace M12MiniMes.UIStart
                             StatuTime.设备id = int.Parse(strInMachineID);
                             StatuTime.设备名称 = strInMachineName;
                             StatuTime.记录时间 = DateTime.Now;
+                            DateTime T = StatuTime.记录时间;
+                            if ((T.Hour<9&&T.Minute<10) &&(T.Hour<21&&T.Minute<10))//白班
+                            {
+
+                            }
+                            else
+                            {
+
+                            }
                             StatuTime.运行 = run;
                             StatuTime.等待 = wait;
                             StatuTime.暂停 = pause;
