@@ -1,4 +1,4 @@
- 		 		 		 		 		 		 		 		 		 		 
+ 		 		 		 		 		 		 		 		 		 		 		 
 using System;
 using System.Text;
 using System.Data;
@@ -120,7 +120,7 @@ namespace M12MiniMes.UI
                 GridView gridView = this.winGridViewPager1.gridView1;
                 if (gridView != null)
                 {
-					//序号,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修
+					//序号,班次,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修
 					//gridView.SetGridColumWidth("Note", 200);
                 }
             }
@@ -227,12 +227,13 @@ namespace M12MiniMes.UI
             //displayColumns = string.IsNullOrEmpty(displayColumns) ? string.Join(",", permitDict.Keys) : displayColumns;
             //this.winGridViewPager1.DisplayColumns = displayColumns; 
 			
-			this.winGridViewPager1.DisplayColumns = "序号,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修";
+			this.winGridViewPager1.DisplayColumns = "序号,班次,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修";
             this.winGridViewPager1.ColumnNameAlias = BLLFactory<设备状态时长表>.Instance.GetColumnNameAlias();//字段列显示名称转义
 
             #region 添加别名解析
 
            //this.winGridViewPager1.AddColumnAlias("序号", "序号");
+           //this.winGridViewPager1.AddColumnAlias("班次", "班次");
            //this.winGridViewPager1.AddColumnAlias("设备id", "设备id");
            //this.winGridViewPager1.AddColumnAlias("设备名称", "设备名称");
            //this.winGridViewPager1.AddColumnAlias("记录时间", "记录时间");
@@ -319,13 +320,14 @@ namespace M12MiniMes.UI
             {
                 string where = GetConditionSql();
                 List<设备状态时长表Info> list = BLLFactory<设备状态时长表>.Instance.Find(where);
-                 DataTable dtNew = DataTableHelper.CreateTable("序号|int,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修");
+                 DataTable dtNew = DataTableHelper.CreateTable("序号|int,班次,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修");
                 DataRow dr;
                 int j = 1;
                 for (int i = 0; i < list.Count; i++)
                 {
                     dr = dtNew.NewRow();
                     dr["序号"] = j++;
+                     dr["班次"] = list[i].班次;
                      dr["设备id"] = list[i].设备id;
                      dr["设备名称"] = list[i].设备名称;
                      dr["记录时间"] = list[i].记录时间;
@@ -374,7 +376,7 @@ namespace M12MiniMes.UI
                 dlg = new FrmAdvanceSearch();
                 dlg.FieldTypeTable = BLLFactory<设备状态时长表>.Instance.GetFieldTypeList();
                 dlg.ColumnNameAlias = BLLFactory<设备状态时长表>.Instance.GetColumnNameAlias();                
-                 dlg.DisplayColumns = "设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修";
+                 dlg.DisplayColumns = "班次,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修";
 
                 #region 下拉列表数据
 
@@ -512,6 +514,7 @@ namespace M12MiniMes.UI
             if (condition == null)
             {
                 condition = new SearchCondition();
+                condition.AddCondition("班次", this.txt班次.Text.Trim(), SqlOperator.Like);
                 condition.AddNumericCondition("设备id", this.txt设备id1, this.txt设备id2); //数值类型
                 condition.AddCondition("设备名称", this.txt设备名称.Text.Trim(), SqlOperator.Like);
                 condition.AddDateCondition("记录时间", this.txt记录时间1, this.txt记录时间2); //日期类型
@@ -543,7 +546,8 @@ namespace M12MiniMes.UI
             DateTime dtDefault = Convert.ToDateTime("1900-01-01");
             DateTime dt;
             设备状态时长表Info info = new 设备状态时长表Info();
-             info.设备id = GetRowData(dr, "设备id").ToInt32();
+             info.班次 = GetRowData(dr, "班次");
+              info.设备id = GetRowData(dr, "设备id").ToInt32();
               info.设备名称 = GetRowData(dr, "设备名称");
   
             string 记录时间 = GetRowData(dr, "记录时间");

@@ -18,7 +18,7 @@ namespace M12MiniMes.Entity
 	    public 设备状态时长表Info()
 		{
             this.序号= 0;
-             this.设备id= 0;
+              this.设备id= 0;
            
 		}
 
@@ -26,6 +26,9 @@ namespace M12MiniMes.Entity
         
 		[DataMember]
         public virtual int 序号 { get; set; }
+
+		[DataMember]
+        public virtual string 班次 { get; set; }
 
 		[DataMember]
         public virtual int 设备id { get; set; }

@@ -44,6 +44,7 @@ namespace M12MiniMes.DALSQL
 			SmartDataReader reader = new SmartDataReader(dataReader);
 			
 			info.序号 = reader.GetInt32("序号");
+			info.班次 = reader.GetString("班次");
 			info.设备id = reader.GetInt32("设备id");
 			info.设备名称 = reader.GetString("设备名称");
 			info.记录时间 = reader.GetDateTime("记录时间");
@@ -68,6 +69,7 @@ namespace M12MiniMes.DALSQL
 		    设备状态时长表Info info = obj as 设备状态时长表Info;
 			Hashtable hash = new Hashtable(); 
 			
+ 			hash.Add("班次", info.班次);
  			hash.Add("设备id", info.设备id);
  			hash.Add("设备名称", info.设备名称);
  			hash.Add("记录时间", info.记录时间);
@@ -91,6 +93,7 @@ namespace M12MiniMes.DALSQL
             Dictionary<string, string> dict = new Dictionary<string, string>();
             #region 添加别名解析
             //dict.Add("ID", "编号");
+             dict.Add("班次", "");
              dict.Add("设备id", "");
              dict.Add("设备名称", "");
              dict.Add("记录时间", "");
@@ -112,7 +115,7 @@ namespace M12MiniMes.DALSQL
         /// <returns></returns>
         public override string GetDisplayColumns()
         {
-            return "序号,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修";
+            return "序号,班次,设备id,设备名称,记录时间,运行,等待,暂停,手动,报警,点检,维修";
         }
     }
 }

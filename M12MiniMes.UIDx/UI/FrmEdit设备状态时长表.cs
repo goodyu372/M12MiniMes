@@ -71,7 +71,8 @@ namespace M12MiniMes.UI
                 {
                 	tempInfo = info;//重新给临时对象赋值，使之指向存在的记录对象
                 	
-                	txt设备id.Value = info.设备id;
+                    txt班次.Text = info.班次;
+                   	txt设备id.Value = info.设备id;
                        txt设备名称.Text = info.设备名称;
                    	txt记录时间.SetDateTime(info.记录时间);	
                       txt运行.Text = info.运行;
@@ -88,7 +89,7 @@ namespace M12MiniMes.UI
             }
             else
             {
-          
+           
                 //this.btnOK.Enabled = HasFunction("设备状态时长表/Add");  
             }
             
@@ -104,6 +105,7 @@ namespace M12MiniMes.UI
         private void SetPermit()
         {
             #region 设置控件和字段的对应关系
+            //this.txt班次.Tag = "班次";
             //this.txt设备id.Tag = "设备id";
             //this.txt设备名称.Tag = "设备名称";
             //this.txt记录时间.Tag = "记录时间";
@@ -149,7 +151,8 @@ namespace M12MiniMes.UI
         /// <param name="info"></param>
         private void SetInfo(设备状态时长表Info info)
         {
-            info.设备id = Convert.ToInt32(txt设备id.Value);
+            info.班次 = txt班次.Text;
+                info.设备id = Convert.ToInt32(txt设备id.Value);
                 info.设备名称 = txt设备名称.Text;
                 info.记录时间 = txt记录时间.DateTime;
                info.运行 = txt运行.Text;
