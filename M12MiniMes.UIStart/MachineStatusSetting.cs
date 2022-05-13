@@ -258,12 +258,12 @@ namespace M12MiniMes.UIStart
                     MessageBox.Show("报警内容，不能为空！");
                     return;
                 }
-                if (MachineStatus.machineStatus.DicMachineStatus.Keys.Contains(AlarmID))
+                if (MachineStatus.machineStatus.DicMachineAlarmInformation.Keys.Contains(AlarmID))
                 {
 
                     //return;
-                    MachineStatus.machineStatus.DicMachineStatus.Remove(AlarmID);
-                    MachineStatus.machineStatus.DicMachineStatus.Add(AlarmID, AlarmName);
+                    MachineStatus.machineStatus.DicMachineAlarmInformation.Remove(AlarmID);
+                    MachineStatus.machineStatus.DicMachineAlarmInformation.Add(AlarmID, AlarmName);
                     MessageBox.Show("修改成功！");
                 }
                 else
